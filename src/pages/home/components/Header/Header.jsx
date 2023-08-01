@@ -31,7 +31,7 @@ const Header = () => {
   };
   return (
     <div className="grid grid-cols-12 gap-0 h-[500px] relative">
-      <div className="col-span-7 bg-headerBg text-white bg-[#222] bg-center bg-no-repeat bg-cover">
+      <div className="col-span-7 bg-headerBg text-white bg-[#161535] bg-center bg-no-repeat bg-cover">
         <Slider
           ref={sliderRef1}
           touchMove={false}
@@ -117,7 +117,7 @@ const Header = () => {
         </Slider>
       </div>
 
-      <div className="space-y-9 absolute top-[30%] right-[40.2%]">
+      <div className="space-y-9 absolute top-[30%] right-[40.3%]">
         {data.map((item, index) => {
           return <Dot id={index} />;
         })}
