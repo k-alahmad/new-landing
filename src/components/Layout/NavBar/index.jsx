@@ -10,7 +10,7 @@ import { showModal } from "../../../redux/modal.slice";
 import { handleScroll } from "../../../helpers/scroll";
 import { NavElement } from "../../../data/navData";
 const NavBarT2 = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [header, setHeader] = useState("transparent");
   const [selectedLink, setSelectedLink] = useState("home");
