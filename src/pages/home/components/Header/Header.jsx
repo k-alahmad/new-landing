@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { data } from "../../../../data/projectsData";
 import wallet from "../../../../assets/icons/wallet.svg";
 import coin from "../../../../assets/icons/coin.svg";
+import Button from "../../../../components/UI/Button";
 const Header = () => {
   return (
     <div className="grid grid-cols-12 gap-0 h-[500px]">
@@ -46,6 +47,15 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
+                <Button
+                  bgColor={"bg-[#DDB26E]"}
+                  text={"More Details"}
+                  borderRadius={6}
+                  textColor={"text-black"}
+                  customStyle={"text-tiny ml-2"}
+                  w={"200px"}
+                  h={"55px"}
+                />
               </div>
             );
           })}
