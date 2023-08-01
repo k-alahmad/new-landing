@@ -30,7 +30,7 @@ const Header = () => {
     );
   };
   return (
-    <div className="grid grid-cols-12 gap-0 h-[500px] relative">
+    <div className="grid grid-cols-12 gap-0 h-[600px] relative">
       <div className="col-span-7 bg-headerBg text-white bg-[#161535] bg-center bg-no-repeat bg-cover">
         <Slider
           ref={sliderRef1}
@@ -40,11 +40,12 @@ const Header = () => {
           autoplay
           autoplaySpeed={3000}
           infinite={true}
-          className="mt-[10%] ml-[10%]"
+          className="mt-[15%] ml-[10%]"
           pauseOnHover={false}
           pauseOnFocus={false}
           beforeChange={(prev, next) => {
             setSelected(next);
+            sliderRef2.current.slickGoTo(next);
           }}
         >
           {data.map((item, index) => {
@@ -54,7 +55,7 @@ const Header = () => {
                 key={index}
               >
                 <p className="text-big font-medium">{item.title} </p>
-                <p className="text-tiny font-light text-gray-300">
+                <p className="w-[70%] text-[18px] font-light text-gray-300">
                   {item.description}
                 </p>
                 <div className="flex gap-x-12">
@@ -109,7 +110,7 @@ const Header = () => {
               <img
                 src={item.image}
                 key={index}
-                className="w-full h-[500px]"
+                className="w-full h-[600px]"
                 alt=""
               />
             );

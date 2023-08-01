@@ -5,11 +5,11 @@ const LinkElement = ({ name, link, styled, onClick }) => {
       onClick={onClick}
       style={({ isActive }) => {
         return {
-          color: isActive ? "#B28A5D" : "black",
-          borderRadius: 2,
+          color: isActive ? "#B28A5D" : "white",
+          borderRadius: 0,
           borderBottomColor: isActive ? "#B28A5D" : "white",
-          borderBottomWidth: 3,
-          paddingBottom: 8,
+          borderBottomWidth: 2,
+          paddingBottom: 4,
         };
       }}
       to={link}

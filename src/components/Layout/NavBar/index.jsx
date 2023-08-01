@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { showModal } from "../../../redux/modal.slice";
 import { handleScroll } from "../../../helpers/scroll";
 import { NavElement } from "../../../data/navData";
+import Logo from "../../../assets/logos/AVA-Logo.svg";
 const NavBarT2 = () => {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -37,23 +38,24 @@ const NavBarT2 = () => {
           // dir={i18n.language == "en" ? "" : "rtl"}
           className={`${
             header == "white"
-              ? "shadow-2xl text-primary"
-              : "shadow-0 text-white"
-          } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex`}
+              ? "shadow-2xl border-transparent"
+              : "shadow-0 border-gray-400"
+          } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex border-b-[1px]  justify-start items-center gap-x-24`}
           style={{
-            background: header === "white" ? "white" : "transparent",
+            background: header === "white" ? "#161535" : "transparent",
           }}
         >
-          <div className="flex-1 flex justify-evenly items-center">
-            {NavElement.map((e) => (
-              <LinkElement
-                key={e.link}
-                name={t(e.name)}
-                link={e.link}
-                selectedLink={selectedLink}
-              />
-            ))}
-          </div>
+          <img src={Logo} className="h-16" alt="" />
+          {NavElement.map((e) => (
+            <LinkElement
+              key={e.link}
+              name={t(e.name)}
+              link={e.link}
+              selectedLink={selectedLink}
+              header={header}
+            />
+          ))}
+
           <div
             className={`flex justify-evenly lg:justify-between items-center h-16 lg:hidden`}
           >
