@@ -5,9 +5,9 @@ const LinkElement = ({ name, link, styled, onClick }) => {
       onClick={onClick}
       style={({ isActive }) => {
         return {
-          color: isActive ? "rgba(131, 88, 183, 1)" : "black",
+          color: isActive ? "#B28A5D" : "black",
           borderRadius: 2,
-          borderBottomColor: isActive ? "rgba(131, 88, 183, 1)" : "white",
+          borderBottomColor: isActive ? "#B28A5D" : "white",
           borderBottomWidth: 3,
           paddingBottom: 8,
         };

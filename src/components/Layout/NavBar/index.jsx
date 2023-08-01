@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-// import Logo from "../../../assets/logo/logo.png";
 import Drawer from "./Drawer";
 import LinkElement from "./LinkElement";
 import Dropdown from "./Language";
 import { MdDehaze } from "react-icons/md";
-const NavBar = () => {
+import { FaPlus } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../../redux/modal.slice";
+import { handleScroll } from "../../../helpers/scroll";
+import { NavElement } from "../../../data/navData";
+const NavBarT2 = () => {
   const { t, i18n } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [header, setHeader] = useState(false);
-
-  let elements = [{ name: t("home"), link: "/" }];
+  const [header, setHeader] = useState("transparent");
+  const [selectedLink, setSelectedLink] = useState("home");
+  const dispatch = useDispatch();
 
   const listenScrollEvent = (event) => {
-    if (document.documentElement.scrollTop < 100) {
-      return setHeader(false);
-    } else if (document.documentElement.scrollTop > 110) {
-      return setHeader(true);
+    if (document.documentElement.scrollTop < 180) {
+      return setHeader("transparent");
+    } else if (document.documentElement.scrollTop > 180) {
+      return setHeader("white");
     }
   };
   useEffect(() => {
@@ -28,56 +32,73 @@ const NavBar = () => {
   }, []);
   return (
     <>
-      {/* <div className="flex flex-col justify-center items-center">
+      <div className={`flex flex-col justify-center items-center`}>
         <div
-          dir={i18n.language == "en" ? "" : "rtl"}
+          // dir={i18n.language == "en" ? "" : "rtl"}
           className={`${
-            header
-              ? "shadow-2xl rounded-2xl w-[80%] translate-y-2"
-              : "w-full px-[10%] translate-y-0"
-          }   border-white border-2  bg-white transition-all duration-300 z-40 fixed`}
+            header == "white"
+              ? "shadow-2xl text-primary"
+              : "shadow-0 text-white"
+          } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex`}
+          style={{
+            background: header === "white" ? "white" : "transparent",
+          }}
         >
-          <div className={`flex justify-between items-center`}>
-            <div className="flex-1 flex justify-start items-center">
-              <div className="flex justify-center items-center">
-                <img
-                  className="h-[80px] sm:h-[80px] cursor-pointer md:px-14"
-                  src={Logo}
-                  alt="LOGO"
-                />
+          <div className="flex-1 flex justify-evenly items-center">
+            {NavElement.map((e) => (
+              <LinkElement
+                key={e.link}
+                name={t(e.name)}
+                link={e.link}
+                selectedLink={selectedLink}
+              />
+            ))}
+          </div>
+          <div
+            className={`flex justify-evenly lg:justify-between items-center h-16 lg:hidden`}
+          >
+            {/* <div className="flex flex-1">
+              <div
+                className="flex justify-center items-center px-[3%] cursor-pointer"
+                onClick={() =>
+                  dispatch(showModal({ data: <RegisterT1 modal={true} /> }))
+                }
+              >
+                <FaPlus className="animate-pulse" />
+                <p className="font-normal uppercase p-4 ">{t("register")}</p>
               </div>
-              {elements.map((e) => (
-                <LinkElement
-                  key={e.link}
-                  name={e.name}
-                  link={e.link}
-                  styled={"hidden md:block px-8 hover:text-purple"}
-                />
-              ))}
-            </div>
-            <Dropdown />
+            </div> */}
+            {/* <Dropdown
+              textColor={header == "white" ? "text-primary" : "text-white"}
+            /> */}
+            <p className="-mr-6 max-lg:hidden">{t("menu")}</p>
             <div
               onClick={() => setMobileOpen(true)}
-              className="text-purple px-8 block md:hidden"
+              className=" lg:px-8 block cursor-pointer"
             >
               <MdDehaze size={24} />
             </div>
           </div>
         </div>
-        <div className={`h-24`} />
       </div>
       <Drawer isOpen={mobileOpen} setIsOpen={setMobileOpen}>
-        {elements.map((e) => (
+        {NavElement.map((e) => (
           <LinkElement
             key={e.link}
-            name={e.name}
+            name={t(e.name)}
             link={e.link}
-            onClick={() => setMobileOpen(false)}
+            selectedLink={selectedLink}
+            onClick={() => {
+              setMobileOpen(false);
+              handleScroll(e.link);
+              setSelectedLink(e.link);
+            }}
           />
         ))}
-      </Drawer> */}
+      </Drawer>
+      <div className="h-16" />
     </>
   );
 };
 
-export default NavBar;
+export default NavBarT2;
