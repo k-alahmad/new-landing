@@ -8,7 +8,12 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="grid md:grid-cols-3 bg-gradient-to-b from-black/70 to-black w-full px-[3%] py-[3%] items-center justify-center justify-items-center  ">
+    <div
+      style={{
+        background: "linear-gradient(332deg, #DDB26E 0%, #080C13 70%)",
+      }}
+      className="grid md:grid-cols-3 w-full px-[3%] py-[3%] items-center justify-center justify-items-center  "
+    >
       <div className="text-base md:text-lg text-offWhite">
         <p className="py-4 text-center md:text-start">
           2023 AVA REAL ESTATE, LLC. All rights reserved
@@ -16,8 +21,7 @@ const Footer = () => {
       </div>
       <a
         className="text-white max-lg:py-4 text-center md:text-start"
-        href="https://avarealestate.ae/privacy-policy/"
-        target="_blank"
+        href="/privacy-policy"
       >
         Privacy Policy
       </a>

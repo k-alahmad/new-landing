@@ -17,9 +17,9 @@ const NavBarT2 = () => {
   const dispatch = useDispatch();
 
   const listenScrollEvent = (event) => {
-    if (document.documentElement.scrollTop < 180) {
+    if (document.documentElement.scrollTop < 70) {
       return setHeader("transparent");
-    } else if (document.documentElement.scrollTop > 180) {
+    } else if (document.documentElement.scrollTop > 70) {
       return setHeader("white");
     }
   };
@@ -96,7 +96,7 @@ const NavBarT2 = () => {
           />
         ))}
       </Drawer>
-      <div className="h-16" />
+      {/* <div className="h-16" /> */}
     </>
   );
 };
