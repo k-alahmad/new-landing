@@ -59,7 +59,7 @@ const Header = () => {
                   <div className="flex gap-x-3 items-center">
                     <img src={wallet} alt="" />
                     <div>
-                      <p className="text-small">{item.plan} </p>
+                      <p className="text-small">{item.plan.name}</p>
                       <p className="text-[14px] text-gray-300">Payment Plan</p>
                     </div>
                   </div>
