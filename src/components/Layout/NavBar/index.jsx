@@ -10,12 +10,14 @@ import { showModal } from "../../../redux/modal.slice";
 import { handleScroll } from "../../../helpers/scroll";
 import { NavElement } from "../../../data/navData";
 import Logo from "../../../assets/logos/AVA-Logo.svg";
+import { useLocation } from "react-router-dom";
 const NavBarT2 = () => {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [header, setHeader] = useState("transparent");
   const [selectedLink, setSelectedLink] = useState("home");
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const listenScrollEvent = (event) => {
     if (document.documentElement.scrollTop < 70) {
@@ -42,7 +44,12 @@ const NavBarT2 = () => {
               : "shadow-0 border-gray-400"
           } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex border-b-[1px]  justify-start items-center gap-x-24`}
           style={{
-            background: header === "white" ? "#161535" : "transparent",
+            background:
+              header === "white"
+                ? "#161535"
+                : location.pathname == "/"
+                ? "transparent"
+                : "#161535",
           }}
         >
           <img src={Logo} className="h-16" alt="" />
