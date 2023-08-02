@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="my-28 px-[10%] text-tiny">
+    <div className="my-28 px-[5%] text-tiny">
       <p className="p-2 bg-gray-100 text-smaller font-semibold">
         AVA Real Estate values its customers’ privacy and is committed to
         keeping their personal information and other data private and safe. The
