@@ -118,7 +118,7 @@ const Header = () => {
         </Slider>
       </div>
 
-      <div className="space-y-9 absolute top-[30%] right-[40.3%]">
+      <div className="space-y-9 absolute top-[30%] xl:right-[39.5%] 2xl:right-[40.3%]">
         {data.map((item, index) => {
           return <Dot key={index} id={index} />;
         })}

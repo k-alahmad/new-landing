@@ -10,6 +10,17 @@ export const data = [
     plan: "20/60/20 %",
     startingPrice: "1.2M AED",
     url: "https://330riverside.avarealestate.ae/en",
+    location: "",
+    handover: "",
+    propertes: [
+      {
+        startingPrice: "",
+        area: "",
+        bedroomNumber: "",
+        bathsNumber: "",
+        image: "",
+      },
+    ],
   },
   {
     image: picJlt,
