@@ -20,6 +20,7 @@ i18n.use(initReactI18next).init({
         formFullName: "الاسم الكامل",
         formPhoneNumber: "رقم الموبايل",
         formEmail: "الايميل",
+        AboutUs: "من نحن",
       },
     },
     en: {
@@ -38,6 +39,7 @@ i18n.use(initReactI18next).init({
         formFullName: "Full Name",
         formPhoneNumber: "Phone Number",
         formEmail: "Email",
+        AboutUs: "About Us",
       },
     },
   },

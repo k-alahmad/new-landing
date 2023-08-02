@@ -1,4 +1,4 @@
 export const NavElement = [
-  { name: "Home", link: "/" },
+  { name: "home", link: "/" },
   { name: "AboutUs", link: "/about-us" },
 ];
