@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div
       style={{
-        background: "linear-gradient(132deg, #161535 40%, #DDB26E 150%)",
+        background: "linear-gradient(132deg, #161535 40%, white 200%)",
       }}
       className="grid md:grid-cols-3 w-full px-[3%] py-[3%] items-center justify-center justify-items-center  "
     >

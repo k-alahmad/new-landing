@@ -8,14 +8,13 @@ const Header = () => {
   const [selected, setSelected] = useState(0);
   const sliderRef1 = useRef();
   const sliderRef2 = useRef();
-  useEffect(() => {
-    console.log(sliderRef1.current);
-  }, [sliderRef1]);
   const Dot = ({ id }) => {
+    console.log(id);
+    console.log(selected);
     return (
       <div
         className={`p-[2px] m-1 drop-shadow-2xl ${
-          selected == id ? "border-white" : "border-[#3F4146]"
+          selected == id ? "border-[#AA8A3A]" : "border-white/80"
         } border-white border-2 rounded-full transition-all duration-500`}
         onClick={() => {
           setSelected(id);
@@ -23,7 +22,7 @@ const Header = () => {
           sliderRef2.current.slickGoTo(id);
         }}
       >
-        <div className="bg-[#3F4146]/70 h-9 w-9 rounded-full text-white flex justify-center items-center font-bold text-smaller cursor-pointer">
+        <div className="bg-[#161535]/80 h-9 w-9 rounded-full text-white flex justify-center items-center font-bold text-smaller cursor-pointer">
           {id + 1}
         </div>
       </div>
@@ -38,7 +37,7 @@ const Header = () => {
           dots={false}
           arrows={false}
           autoplay
-          autoplaySpeed={3000}
+          autoplaySpeed={5000}
           infinite={true}
           className="mt-[15%] ml-[10%]"
           pauseOnHover={false}
@@ -84,6 +83,9 @@ const Header = () => {
                   customStyle={"text-tiny ml-2"}
                   w={"200px"}
                   h={"55px"}
+                  onClick={() => {
+                    window.open(item.url, "_blank", "noopener,noreferrer");
+                  }}
                 />
               </div>
             );
@@ -97,7 +99,7 @@ const Header = () => {
           dots={false}
           arrows={false}
           autoplay
-          autoplaySpeed={3000}
+          autoplaySpeed={5000}
           infinite={true}
           vertical
           verticalSwiping={false}
