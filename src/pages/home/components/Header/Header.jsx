@@ -9,8 +9,6 @@ const Header = () => {
   const sliderRef1 = useRef();
   const sliderRef2 = useRef();
   const Dot = ({ id }) => {
-    console.log(id);
-    console.log(selected);
     return (
       <div
         className={`p-[2px] m-1 drop-shadow-2xl ${
@@ -122,7 +120,7 @@ const Header = () => {
 
       <div className="space-y-9 absolute top-[30%] right-[40.3%]">
         {data.map((item, index) => {
-          return <Dot id={index} />;
+          return <Dot key={index} id={index} />;
         })}
       </div>
     </div>
