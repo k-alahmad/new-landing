@@ -14,7 +14,9 @@ const LinkElement = ({ name, link, styled, onClick }) => {
       }}
       to={link}
     >
-      <p className={`px-1 cursor-pointer font-MED text-smaller ${styled}`}>
+      <p
+        className={`px-1 cursor-pointer font-bold text-tiny 2xl:text-smaller ${styled}`}
+      >
         {name}
       </p>
     </NavLink>

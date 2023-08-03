@@ -20,9 +20,9 @@ const NavBarT2 = () => {
   const location = useLocation();
 
   const listenScrollEvent = (event) => {
-    if (document.documentElement.scrollTop < 70) {
+    if (document.documentElement.scrollTop < 40) {
       return setHeader("transparent");
-    } else if (document.documentElement.scrollTop > 70) {
+    } else if (document.documentElement.scrollTop > 40) {
       return setHeader("white");
     }
   };
@@ -42,17 +42,17 @@ const NavBarT2 = () => {
             header == "white"
               ? "shadow-2xl border-transparent"
               : "shadow-0 border-gray-400"
-          } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex border-b-[1px]  justify-start items-center gap-x-24`}
+          } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex justify-start items-center gap-x-24`}
           style={{
             background:
               header === "white"
                 ? "#161535"
-                : location.pathname == "/"
+                : location.pathname == "/" || location.pathname == "/about-us"
                 ? "transparent"
                 : "#161535",
           }}
         >
-          <img src={Logo} className="h-16" alt="" />
+          <img src={Logo} className="h-10 2xl:h-16" alt="" />
           {NavElement.map((e) => (
             <LinkElement
               key={e.link}
