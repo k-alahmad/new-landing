@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { data } from "../../../../data/projectsData";
 import wallet from "../../../../assets/icons/wallet.svg";
@@ -20,15 +20,15 @@ const Header = () => {
           sliderRef2.current.slickGoTo(id);
         }}
       >
-        <div className="bg-[#161535]/80 h-9 w-9 rounded-full text-white flex justify-center items-center font-bold text-smaller cursor-pointer">
+        <div className="bg-[#161535]/60 h-9 w-9 rounded-full text-white flex justify-center items-center font-bold text-smaller cursor-pointer">
           {id + 1}
         </div>
       </div>
     );
   };
   return (
-    <div className="grid grid-cols-12 gap-0 xl:h-[500px] 2xl:h-[600px] relative">
-      <div className="col-span-7 bg-headerBg text-white bg-[#161535] bg-center bg-no-repeat bg-cover">
+    <div className="md:grid md:grid-cols-12 gap-0 xl:h-[500px] 2xl:h-[600px] relative">
+      <div className="col-span-7 bg-headerBg text-white bg-[#161535] bg-center bg-no-repeat bg-cover max-md:pt-24">
         <Slider
           ref={sliderRef1}
           touchMove={false}
@@ -37,7 +37,7 @@ const Header = () => {
           autoplay
           autoplaySpeed={5000}
           infinite={true}
-          className="xl:mt-[12%] 2xl:mt-[15%] xl:ml-[5%] 2xl:ml-[10%]"
+          className="md:mt-[15%] xl:mt-[12%] 2xl:mt-[15%] ml-[3%] md:ml-[5%] 2xl:ml-[10%]"
           pauseOnHover={false}
           pauseOnFocus={false}
           beforeChange={(prev, next) => {
@@ -48,27 +48,31 @@ const Header = () => {
           {data.map((item, index) => {
             return (
               <div
-                className="flex flex-col justify-center items-center space-y-7"
+                className="flex flex-col justify-center items-center space-y-4 xl:space-y-7 max-md:py-4 py-2"
                 key={index}
               >
-                <p className="text-[38px] 2xl:text-big font-medium">
-                  {item.title}{" "}
+                <p className="text-med xl:text-[38px] 2xl:text-big font-medium">
+                  {item.title}
                 </p>
-                <p className="w-[70%] text-[18px] font-light text-gray-300">
+                <p className="w-[70%] text-[14px] lg:text-[18px] font-light text-gray-300">
                   {item.description}
                 </p>
                 <div className="flex gap-x-12">
                   <div className="flex gap-x-3 items-center">
                     <img src={wallet} alt="" />
                     <div>
-                      <p className="text-small">{item.plan.name}</p>
+                      <p className="text-smaller lg:text-small">
+                        {item.plan.name}
+                      </p>
                       <p className="text-[14px] text-gray-300">Payment Plan</p>
                     </div>
                   </div>
                   <div className="flex gap-x-3 items-center">
                     <img src={coin} alt="" />
                     <div>
-                      <p className="text-small">{item.startingPrice} </p>
+                      <p className="text-smaller lg:text-small">
+                        {item.startingPrice}
+                      </p>
                       <p className="text-[14px] text-gray-300">
                         Starting Price
                       </p>
@@ -82,7 +86,7 @@ const Header = () => {
                   textColor={"text-white"}
                   customStyle={"text-tiny ml-2"}
                   w={"200px"}
-                  h={"55px"}
+                  h={"50px"}
                   onClick={() => {
                     window.open(item.url, "_blank", "noopener,noreferrer");
                   }}
@@ -112,17 +116,20 @@ const Header = () => {
               <img
                 src={item.image}
                 key={index}
-                className="w-full xl:h-[500px] 2xl:h-[600px]"
+                className="w-full h-[350px] md:h-[420px] xl:h-[500px] 2xl:h-[600px]"
                 alt=""
               />
             );
           })}
         </Slider>
       </div>
-
-      <div className="space-y-9 absolute top-[30%] xl:right-[39.5%] 2xl:right-[40.3%]">
+      <div className="space-y-9 max-md:grid max-md:grid-cols-3 max-md:place-items-center max-md:gap-x-4 absolute top-[52%] sm:top-[47%] right-[2%] md:top-[30%] md:right-[39%] lg:right-[39.6%] xl:right-[39.5%] 2xl:right-[40.3%]">
         {data.map((item, index) => {
-          return <Dot key={index} id={index} />;
+          return (
+            <div key={index} className="w-full h-full self-end">
+              <Dot id={index} />
+            </div>
+          );
         })}
       </div>
     </div>

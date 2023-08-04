@@ -10,11 +10,11 @@ const ProjectDetails = ({
   return (
     <div className="py-1 text-tiny 2xl:text-smaller w-full">
       <p className="font-semibold text-primary text-big">{title}</p>
-      <div className="grid grid-cols-3 gap-x-8 py-4 place-items-center">
-        <div className="col-span-1">
+      <div className="grid grid-cols-3 md:gap-x-8 py-4 place-items-center">
+        <div className="col-span-3 max-md:py-2 md:col-span-1">
           <p>{description}</p>
         </div>
-        <div>
+        <div className="max-md:col-span-2">
           <p className="font-semibold text-primary ">Payment Plan</p>
           <ul className="list-disc ml-7">
             <li>Type: {plan.name}</li>

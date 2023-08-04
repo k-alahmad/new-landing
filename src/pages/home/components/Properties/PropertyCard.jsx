@@ -13,10 +13,10 @@ const PropertyCard = ({
 }) => {
   return (
     <div className="w-full flex justify-center items-center">
-      <div className="w-[300px] lg:w-[350px] 2xl:w-[400px] drop-shadow-md rounded-md bg-[#FFF]">
+      <div className="w-[260px] md:w-[230px] lg:w-[300px] xl:w-[350px] 2xl:w-[400px] drop-shadow-md rounded-md bg-[#FFF]">
         <img
           src={image}
-          className="h-[260px] lg:h-[300px] 2xl:h-[340px] rounded-t-md w-full"
+          className="h-[240px] md:h-[180px] lg:h-[260px] xl:h-[300px] 2xl:h-[340px] rounded-t-md w-full"
           alt=""
         />
         <div className="mx-5">
@@ -47,7 +47,7 @@ const PropertyCard = ({
           </div>
           <div className="flex flex-col items-center justify-center space-y-1">
             <div className="flex gap-x-1 items-center">
-              <p>{area} </p>
+              <p className="text-tiny lg:text-smaller">{area} </p>
               <img src={squareft} className="w-[24px] h-[24px]" alt="" />
             </div>
             <p className="font-normal text-[12px] text-gray-700">Square (Ft)</p>

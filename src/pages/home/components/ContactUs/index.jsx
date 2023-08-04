@@ -10,7 +10,7 @@ const ContactUs = () => {
       >
         <img
           src={image}
-          className="xl:h-[350px] xl:w-[350px]  2xl:h-[450px] 2xl:w-[450px] rounded-md"
+          className="h-[200px] w-[200px] sm:w-[300px] sm:h-[300px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] xl:h-[350px] xl:w-[350px] 2xl:h-[450px] 2xl:w-[450px] rounded-md"
           alt=""
         />
       </div>
@@ -22,13 +22,26 @@ const ContactUs = () => {
         style={{
           background: "linear-gradient(332deg, #DDB26E -0%, #171534 50%)",
         }}
-        className="xl:h-[400px] 2xl:h-[500px] rounded-md relative"
+        className="h-[720px] md:h-[400px]  2xl:h-[500px] rounded-md relative"
       >
-        <div className="text-white w-[40%] h-full flex p-7">
+        <div className="relative h-[270px] sm:h-[320px] md:hidden">
+          <RotatedCard
+            image={contact330}
+            customStyle={" top-12 right-0 sm:right-12"}
+          />
+          <RotatedCard image={contactAmber} customStyle={"top-0 sm:left-12"} />
+        </div>
+        <div className="text-white md:w-[40%]  flex p-7">
           <RegisterForm />
         </div>
-        <RotatedCard image={contact330} customStyle={"right-[22%] top-3"} />
-        <RotatedCard image={contactAmber} customStyle={"right-0 top-24"} />
+        <RotatedCard
+          image={contact330}
+          customStyle={"max-md:hidden md:right-[24%] xl:right-[22%] md:top-3"}
+        />
+        <RotatedCard
+          image={contactAmber}
+          customStyle={"max-md:hidden md:-right-[2%] xl:right-0 md:top-24"}
+        />
       </div>
     </div>
   );

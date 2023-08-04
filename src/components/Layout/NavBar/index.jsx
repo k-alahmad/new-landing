@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Drawer from "./Drawer";
 import LinkElement from "./LinkElement";
-import Dropdown from "./Language";
+// import Dropdown from "./Language";
 import { MdDehaze } from "react-icons/md";
-import { FaPlus } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { showModal } from "../../../redux/modal.slice";
+// import { FaPlus } from "react-icons/fa";
+// import { useDispatch } from "react-redux";
+// import { showModal } from "../../../redux/modal.slice";
 import { handleScroll } from "../../../helpers/scroll";
 import { NavElement } from "../../../data/navData";
 import Logo from "../../../assets/logos/AVA-Logo.svg";
@@ -16,7 +16,7 @@ const NavBarT2 = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [header, setHeader] = useState("transparent");
   const [selectedLink, setSelectedLink] = useState("home");
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const location = useLocation();
 
   const listenScrollEvent = (event) => {
@@ -42,7 +42,7 @@ const NavBarT2 = () => {
             header == "white"
               ? "shadow-2xl border-transparent"
               : "shadow-0 border-gray-400"
-          } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex justify-start items-center gap-x-24`}
+          } transition-all duration-500 z-40 fixed max-w-[1920px] w-full top-0 px-2 xl:px-12 py-4 flex justify-between md:justify-start items-center  md:gap-x-24`}
           style={{
             background:
               header === "white"
@@ -52,7 +52,7 @@ const NavBarT2 = () => {
                 : "#161535",
           }}
         >
-          <img src={Logo} className="h-10 2xl:h-16" alt="" />
+          <img src={Logo} className="h-12 2xl:h-16" alt="" />
           {NavElement.map((e) => (
             <LinkElement
               key={e.link}
@@ -60,12 +60,11 @@ const NavBarT2 = () => {
               link={e.link}
               selectedLink={selectedLink}
               header={header}
+              styled={"max-md:hidden"}
             />
           ))}
 
-          <div
-            className={`flex justify-evenly lg:justify-between items-center h-16 lg:hidden`}
-          >
+          <div className={`flex justify-between items-center md:hidden`}>
             {/* <div className="flex flex-1">
               <div
                 className="flex justify-center items-center px-[3%] cursor-pointer"
@@ -80,12 +79,12 @@ const NavBarT2 = () => {
             {/* <Dropdown
               textColor={header == "white" ? "text-primary" : "text-white"}
             /> */}
-            <p className="-mr-6 max-lg:hidden">{t("menu")}</p>
             <div
               onClick={() => setMobileOpen(true)}
-              className=" lg:px-8 block cursor-pointer"
+              className=" cursor-pointer text-white flex justify-center items-center gap-x-2"
             >
               <MdDehaze size={24} />
+              <p className="text-white">{t("menu")}</p>
             </div>
           </div>
         </div>

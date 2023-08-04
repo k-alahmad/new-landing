@@ -42,7 +42,7 @@ const Properties = () => {
                   location={item.location}
                   startingPrice={item.startingPrice}
                 />
-                <div className="grid grid-cols-3 mt-12">
+                <div className="md:grid md:grid-cols-3 mt-12 max-md:hidden">
                   {item.propertes.map((i, idx) => {
                     return (
                       <PropertyCard
@@ -55,6 +55,45 @@ const Properties = () => {
                       />
                     );
                   })}
+                </div>
+                <div className="md:hidden">
+                  <Slider
+                    ref={sliderRef}
+                    touchMove={false}
+                    slidesToShow={2}
+                    slidesToScroll={1}
+                    dots={true}
+                    arrows={false}
+                    infinite={false}
+                    autoplay={false}
+                    responsive={[
+                      {
+                        breakpoint: 1000,
+                        settings: {
+                          slidesToShow: 2,
+                        },
+                      },
+                      {
+                        breakpoint: 590,
+                        settings: {
+                          slidesToShow: 1,
+                        },
+                      },
+                    ]}
+                  >
+                    {item.propertes.map((i, idx) => {
+                      return (
+                        <PropertyCard
+                          image={i.image}
+                          key={idx}
+                          area={i.area}
+                          bathsNumber={i.bathsNumber}
+                          bedroomNumber={i.bedroomNumber}
+                          startingPrice={i.startingPrice}
+                        />
+                      );
+                    })}
+                  </Slider>
                 </div>
               </div>
             );
