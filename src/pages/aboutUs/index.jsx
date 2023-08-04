@@ -26,11 +26,11 @@ const AboutUs = () => {
 
   return (
     <div>
-      <div className="md:h-[400px] xl:h-[500px] 2xl:h-[600px] flex justify-center items-center bg-headerBg bg-secondary bg-no-repeat bg-cover bg-center">
+      <div className="h-[380px] md:h-[400px] xl:h-[500px] 2xl:h-[600px] flex justify-center items-center bg-headerBg bg-secondary bg-no-repeat bg-cover bg-center">
         <GradientText
           text={data.headerTitle}
           customStyle={
-            "text-center text-big 2xl:text-bigger font-bold text-primary w-[50%]"
+            "text-center text-big 2xl:text-bigger font-bold text-primary w-[90%] md:w-[50%]"
           }
         />
       </div>
