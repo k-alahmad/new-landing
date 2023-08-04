@@ -106,7 +106,7 @@ const AboutUs = () => {
               universe of communication have a stable relationship Lorem ipsum
               dolor sit amet . The graphic and typographic operators know this
               well, in reality all the professions dealing with the universe of
-              communication{" "}
+              communication
             </li>
             <li>
               Lorem ipsum dolor sit amet . The graphic and typographic operators
@@ -114,7 +114,7 @@ const AboutUs = () => {
               universe of communication have a stable relationship Lorem ipsum
               dolor sit amet . The graphic and typographic operators know this
               well, in reality all the professions dealing with the universe of
-              communication{" "}
+              communication
             </li>
             <li>
               Lorem ipsum dolor sit amet . The graphic and typographic operators
@@ -122,7 +122,7 @@ const AboutUs = () => {
               universe of communication have a stable relationship Lorem ipsum
               dolor sit amet . The graphic and typographic operators know this
               well, in reality all the professions dealing with the universe of
-              communication{" "}
+              communication
             </li>
             <li>
               Lorem ipsum dolor sit amet . The graphic and typographic operators
@@ -130,7 +130,7 @@ const AboutUs = () => {
               universe of communication have a stable relationship Lorem ipsum
               dolor sit amet . The graphic and typographic operators know this
               well, in reality all the professions dealing with the universe of
-              communication{" "}
+              communication
             </li>
             <li>
               Lorem ipsum dolor sit amet . The graphic and typographic operators
@@ -138,7 +138,7 @@ const AboutUs = () => {
               universe of communication have a stable relationship Lorem ipsum
               dolor sit amet . The graphic and typographic operators know this
               well, in reality all the professions dealing with the universe of
-              communication{" "}
+              communication
             </li>
           </ul>
         </div>
@@ -154,7 +154,7 @@ const AboutUs = () => {
               There is a new way to search for a house
             </p>
 
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="" className="h-[135px] w-[185px]" />
           </div>
           <img src={dubai} className="h-[320px] w-full rounded-md" alt="" />
           <img src={dubai} className="h-[320px] w-[40%] rounded-md" alt="" />
