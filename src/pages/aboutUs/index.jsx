@@ -8,6 +8,7 @@ import teamWorkIcon from "../../assets/icons/teamWork.svg";
 import projectsIcon from "../../assets/icons/projects.svg";
 import facesIcon from "../../assets/icons/faces.svg";
 import developmentIcon from "../../assets/icons/development.svg";
+import Logo from "../../assets/logos/black-logo.svg";
 
 const AboutUs = () => {
   const MissionCard = ({ title, text, icon }) => {
@@ -90,8 +91,76 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
+
+      <div className="grid grid-cols-12 gap-7  mt-20">
+        <div className="col-span-6 w-[80%] relative place-self-center space-y-4">
+          <p className="text-bigger font-bold"> Vision</p>
+          <p className="text-small">
+            We work with a clear and thoughtful vision to achieve what we aspire
+            to
+          </p>
+          <ul className="list-disc ml-7 space-y-10 marker:text-primary list-outside">
+            <li>
+              Lorem ipsum dolor sit amet . The graphic and typographic operators
+              know this well, in reality all the professions dealing with the
+              universe of communication have a stable relationship Lorem ipsum
+              dolor sit amet . The graphic and typographic operators know this
+              well, in reality all the professions dealing with the universe of
+              communication{" "}
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet . The graphic and typographic operators
+              know this well, in reality all the professions dealing with the
+              universe of communication have a stable relationship Lorem ipsum
+              dolor sit amet . The graphic and typographic operators know this
+              well, in reality all the professions dealing with the universe of
+              communication{" "}
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet . The graphic and typographic operators
+              know this well, in reality all the professions dealing with the
+              universe of communication have a stable relationship Lorem ipsum
+              dolor sit amet . The graphic and typographic operators know this
+              well, in reality all the professions dealing with the universe of
+              communication{" "}
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet . The graphic and typographic operators
+              know this well, in reality all the professions dealing with the
+              universe of communication have a stable relationship Lorem ipsum
+              dolor sit amet . The graphic and typographic operators know this
+              well, in reality all the professions dealing with the universe of
+              communication{" "}
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet . The graphic and typographic operators
+              know this well, in reality all the professions dealing with the
+              universe of communication have a stable relationship Lorem ipsum
+              dolor sit amet . The graphic and typographic operators know this
+              well, in reality all the professions dealing with the universe of
+              communication{" "}
+            </li>
+          </ul>
+        </div>
+        <div className="col-span-6 w-[80%] place-items-center space-y-7 relative">
+          <div
+            className="h-[630px] w-[390px] flex-shrink-0 rounded-lg backdrop-blur-[15px] absolute right-8 top-[7%] flex flex-col justify-between items-center px-10 py-16"
+            style={{
+              background:
+                "linear-gradient(225deg, rgba(98, 98, 98, 0.24) 0%, rgba(98, 98, 98, 0.03) 100%)",
+            }}
+          >
+            <p className="text-white text-small font-semibold">
+              There is a new way to search for a house
+            </p>
+
+            <img src={Logo} alt="" />
+          </div>
+          <img src={dubai} className="h-[320px] w-full rounded-md" alt="" />
+          <img src={dubai} className="h-[320px] w-[40%] rounded-md" alt="" />
+          <img src={dubai} className="h-[320px] w-full rounded-md" alt="" />
+        </div>
+      </div>
       <br />
       <br />
       <br />
