@@ -99,7 +99,7 @@ const AboutUs = () => {
             We work with a clear and thoughtful vision to achieve what we aspire
             to
           </p>
-          <ul className="list-disc ml-7 space-y-10 marker:text-primary list-outside">
+          <ul className="list-disc ml-7 space-y-14 marker:text-primary list-outside pt-12">
             <li>
               Lorem ipsum dolor sit amet . The graphic and typographic operators
               know this well, in reality all the professions dealing with the
