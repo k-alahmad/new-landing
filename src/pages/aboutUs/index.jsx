@@ -25,7 +25,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="mt-">
+    <div>
       <div className="md:h-[400px] xl:h-[500px] 2xl:h-[600px] flex justify-center items-center bg-headerBg bg-secondary bg-no-repeat bg-cover bg-center">
         <GradientText
           text={data.headerTitle}
@@ -34,8 +34,8 @@ const AboutUs = () => {
           }
         />
       </div>
-      <div className="md:grid md:grid-cols-12 gap-7  mt-20">
-        <div className="col-span-5 md:w-[90%] 2xl:w-[80%] relative place-self-center">
+      <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center md:grid md:grid-cols-12 gap-7 mt-20 max-md:px-[5%] ">
+        <div className="col-span-5 w-[80%] md:w-[90%] 2xl:w-[80%] relative place-self-center">
           <div
             style={{
               background: "rgba(111, 111, 111, 0.24)",
@@ -81,8 +81,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-7  mt-20">
-        <div className="col-span-6 w-[80%] relative place-self-center space-y-4">
+      <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center md:grid md:grid-cols-12 gap-7 mt-20 max-md:px-[5%] ">
+        <div className="col-span-6 md:w-[80%] relative place-self-center space-y-4">
           <p className="text-bigger font-bold"> {data.vision.title} </p>
           <p className="text-small">{data.vision.description}</p>
           <ul className="list-disc ml-7 space-y-14 marker:text-primary list-outside pt-12">
@@ -91,7 +91,7 @@ const AboutUs = () => {
             })}
           </ul>
         </div>
-        <div className="col-span-6 w-[80%] place-items-center space-y-7 relative">
+        <div className="col-span-6 md:w-[80%] place-items-center space-y-7 relative">
           <div
             className="h-[630px] w-[390px] flex-shrink-0 rounded-lg backdrop-blur-[15px] absolute right-8 top-[7%] flex flex-col justify-between items-center px-10 py-16"
             style={{

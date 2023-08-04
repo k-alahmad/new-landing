@@ -2,7 +2,7 @@ import React from "react";
 import bath from "../../../../assets/icons/bath.svg";
 import bedroom from "../../../../assets/icons/bedroom.svg";
 import squareft from "../../../../assets/icons/squareft.svg";
-import { FaDollarSign } from "react-icons/fa";
+import { FaCoins } from "react-icons/fa";
 
 const PropertyCard = ({
   image,
@@ -23,7 +23,7 @@ const PropertyCard = ({
         />
         <div className="mx-5">
           <div className="w-[190px] bg-primary  text-white flex gap-x-3 px-2 py-2 items-center rounded-md -translate-y-4">
-            <FaDollarSign />
+            <FaCoins size={20} />
             {startingPrice}
           </div>
           <p className="font-semibold text-smaller">{name}</p>
