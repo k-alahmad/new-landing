@@ -23,7 +23,6 @@ const AboutUs = () => {
       </div>
     );
   };
-
   return (
     <div>
       <div className="h-[380px] md:h-[400px] xl:h-[500px] 2xl:h-[600px] flex justify-center items-center bg-headerBg bg-secondary bg-no-repeat bg-cover bg-center">
@@ -35,7 +34,7 @@ const AboutUs = () => {
         />
       </div>
       <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center md:grid md:grid-cols-12 gap-7 mt-20 max-md:px-[5%] ">
-        <div className="col-span-5 w-[] md:w-[90%] 2xl:w-[80%] relative place-self-center">
+        <div className="col-span-5 w-[85%] md:w-[90%] 2xl:w-[80%] relative place-self-center">
           <div
             style={{
               background: "rgba(111, 111, 111, 0.24)",
@@ -45,28 +44,28 @@ const AboutUs = () => {
           <img
             src={data.mission.image}
             alt=""
-            className="h-[600px] rounded-md"
+            className="h-[400px] md:h-[600px] rounded-md"
           />
           <div
             style={{
               background:
                 "linear-gradient(225deg, rgba(98, 98, 98, 0.24) 0%, rgba(98, 98, 98, 0.03) 100%)",
             }}
-            className=" h-[200px] w-[80%] backdrop-blur-[15px] absolute z-20 -bottom-[10%] left-[10%] flex justify-evenly items-center rounded-md"
+            className=" h-[200px] w-[80%] backdrop-blur-[15px] absolute z-20 -bottom-[10%] left-[10%] flex justify-center items-center rounded-md"
           >
-            <div className="text-small text-white font-semibold ">
+            <div className="text-small text-white font-semibold px-2">
               <p>Our goal is to provide</p>
               <p>best offers for homes in Dubai</p>
             </div>
-            <div className="w-[60px] h-[60px] bg-primary rounded-md -translate-y-24 flex justify-center items-center">
+            <div className="w-[60px] h-[60px] bg-primary rounded-md -mt-52 flex justify-center items-center absolute right-2 ">
               <img src={aboutIcon} alt="" />
             </div>
           </div>
         </div>
-        <div className="col-span-7 space-y-4">
+        <div className="col-span-7 space-y-4 max-md:mt-7">
           <p className="text-bigger font-bold"> {data.mission.title} </p>
           <p>{data.mission.description}</p>
-          <div className="grid grid-cols-2 gap-7">
+          <div className="md:grid md:grid-cols-2 md:gap-7 max-md:space-y-7">
             {data.mission.items.map((item, index) => {
               return (
                 <MissionCard
@@ -93,7 +92,7 @@ const AboutUs = () => {
         </div>
         <div className="col-span-6 md:w-[80%] place-items-center space-y-7 relative">
           <div
-            className="h-[550px] lg:h-[630px] md:max-xl:w-[240px] w-[390px] flex-shrink-0 rounded-lg backdrop-blur-[15px] absolute md:max-xl:right-0 right-8 top-[4%] lg:top-[7%] flex flex-col justify-between items-center px-10 py-16"
+            className="h-[550px] lg:h-[630px] max-xl:w-[240px] xl:w-[300px] 2xl:w-[390px] flex-shrink-0 rounded-lg backdrop-blur-[15px] absolute max-xl:right-0 xl:right-2 2xl:right-8 top-[4%] lg:top-[7%] flex flex-col justify-between items-center px-10 py-16"
             style={{
               background:
                 "linear-gradient(225deg, rgba(98, 98, 98, 0.24) 0%, rgba(98, 98, 98, 0.03) 100%)",

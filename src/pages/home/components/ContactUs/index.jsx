@@ -27,9 +27,12 @@ const ContactUs = () => {
         <div className="relative h-[270px] sm:h-[320px] md:hidden">
           <RotatedCard
             image={contact330}
-            customStyle={" top-12 right-0 sm:right-12"}
+            customStyle={" top-12 right-4 sm:right-12"}
           />
-          <RotatedCard image={contactAmber} customStyle={"top-0 sm:left-12"} />
+          <RotatedCard
+            image={contactAmber}
+            customStyle={"top-0 left-2 sm:left-12"}
+          />
         </div>
         <div className="text-white md:w-[40%]  flex p-7">
           <RegisterForm />

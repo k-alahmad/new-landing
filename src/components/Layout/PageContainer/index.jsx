@@ -14,10 +14,6 @@ const PageLayout = ({ children }) => {
     setW(width);
   }, [width]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className=" flex flex-col justify-center items-center">
       <NavBar />

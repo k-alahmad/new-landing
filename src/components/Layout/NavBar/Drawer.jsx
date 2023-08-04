@@ -7,7 +7,7 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
   return (
     <main
       className={
-        ` fixed overflow-hidden z-50  bg-gray-900 bg-opacity-0 inset-0 transform ease-in-out ` +
+        ` fixed overflow-hidden z-50  bg-gray-900 bg-opacity-50 inset-0 transform ease-in-out ` +
         (isOpen
           ? ` transition-opacity opacity-100 duration-500 ${
               i18n.language == "en" ? "translate-x-0" : "-translate-x-0"
@@ -29,7 +29,7 @@ export default function Drawer({ children, isOpen, setIsOpen }) {
               }  `)
         }
       >
-        <article className="relative w-full pb-10 flex flex-col justify-start items-center space-y-6 overflow-y-scroll h-full">
+        <article className="relative w-full pb-10 flex flex-col justify-start items-center space-y-6 overflow-y-scroll h-full bg-secondary">
           <header
             dir={i18n.language == "en" ? "ltr" : "rtl"}
             className="p-4 font-bold w-full flex justify-between items-start "
