@@ -35,7 +35,7 @@ const AboutUs = () => {
         />
       </div>
       <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center md:grid md:grid-cols-12 gap-7 mt-20 max-md:px-[5%] ">
-        <div className="col-span-5 w-[80%] md:w-[90%] 2xl:w-[80%] relative place-self-center">
+        <div className="col-span-5 w-[] md:w-[90%] 2xl:w-[80%] relative place-self-center">
           <div
             style={{
               background: "rgba(111, 111, 111, 0.24)",
@@ -93,7 +93,7 @@ const AboutUs = () => {
         </div>
         <div className="col-span-6 md:w-[80%] place-items-center space-y-7 relative">
           <div
-            className="h-[630px] w-[390px] flex-shrink-0 rounded-lg backdrop-blur-[15px] absolute right-8 top-[7%] flex flex-col justify-between items-center px-10 py-16"
+            className="h-[550px] lg:h-[630px] md:max-xl:w-[240px] w-[390px] flex-shrink-0 rounded-lg backdrop-blur-[15px] absolute md:max-xl:right-0 right-8 top-[4%] lg:top-[7%] flex flex-col justify-between items-center px-10 py-16"
             style={{
               background:
                 "linear-gradient(225deg, rgba(98, 98, 98, 0.24) 0%, rgba(98, 98, 98, 0.03) 100%)",
@@ -107,17 +107,17 @@ const AboutUs = () => {
           </div>
           <img
             src={data.vision.imageOne}
-            className="h-[320px] w-full rounded-md"
+            className="h-[250px] lg:h-[320px] w-full rounded-md"
             alt=""
           />
           <img
             src={data.vision.imageTwo}
-            className="h-[320px] w-[40%] rounded-md"
+            className="h-[250px] lg:h-[320px] w-[40%] rounded-md"
             alt=""
           />
           <img
             src={data.vision.imageThree}
-            className="h-[320px] w-full rounded-md"
+            className="h-[250px] lg:h-[320px] w-full rounded-md"
             alt=""
           />
         </div>
