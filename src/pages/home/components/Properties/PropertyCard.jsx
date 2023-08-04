@@ -26,7 +26,7 @@ const PropertyCard = ({
             <FaCoins size={20} />
             {startingPrice}
           </div>
-          <div className="h-24">
+          <div className="h-24 xl:h-20">
             <p className="font-semibold text-smaller">{name}</p>
             <p>{smallDescription}</p>
           </div>
