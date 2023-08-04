@@ -33,7 +33,7 @@ const AboutUs = () => {
 
   return (
     <div className="mt-">
-      <div className="xl:h-[500px] 2xl:h-[600px] flex justify-center items-center bg-headerBg bg-secondary bg-no-repeat bg-cover bg-center">
+      <div className="md:h-[400px] xl:h-[500px] 2xl:h-[600px] flex justify-center items-center bg-headerBg bg-secondary bg-no-repeat bg-cover bg-center">
         <GradientText
           text={data.headerTitle}
           customStyle={
@@ -41,8 +41,8 @@ const AboutUs = () => {
           }
         />
       </div>
-      <div className="grid grid-cols-12 gap-7  mt-20">
-        <div className="col-span-5 w-[80%] relative place-self-center">
+      <div className="md:grid md:grid-cols-12 gap-7  mt-20">
+        <div className="col-span-5 md:w-[90%] 2xl:w-[80%] relative place-self-center">
           <div
             style={{
               background: "rgba(111, 111, 111, 0.24)",
