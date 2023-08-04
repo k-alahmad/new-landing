@@ -46,53 +46,56 @@ const Header = () => {
           }}
         >
           {data.map((item, index) => {
-            return (
-              <div
-                className="flex flex-col justify-center items-center space-y-4 xl:space-y-7 max-md:py-4 py-2"
-                key={index}
-              >
-                <p className="text-med xl:text-[38px] 2xl:text-big font-medium">
-                  {item.title}
-                </p>
-                <p className="w-[70%] text-[14px] lg:text-[18px] font-light text-gray-300">
-                  {item.description}
-                </p>
-                <div className="flex gap-x-12">
-                  <div className="flex gap-x-3 items-center">
-                    <img src={wallet} alt="" />
-                    <div>
-                      <p className="text-smaller lg:text-small">
-                        {item.plan.name}
-                      </p>
-                      <p className="text-[14px] text-gray-300">Payment Plan</p>
+            if (index < 3)
+              return (
+                <div
+                  className="flex flex-col justify-center items-center space-y-4 xl:space-y-7 max-md:py-4 py-2"
+                  key={index}
+                >
+                  <p className="text-med xl:text-[38px] 2xl:text-big font-medium">
+                    {item.title}
+                  </p>
+                  <p className="w-[70%] text-[14px] lg:text-[18px] font-light text-gray-300">
+                    {item.description}
+                  </p>
+                  <div className="flex gap-x-12">
+                    <div className="flex gap-x-3 items-center">
+                      <img src={wallet} alt="" />
+                      <div>
+                        <p className="text-smaller lg:text-small">
+                          {item.plan.name}
+                        </p>
+                        <p className="text-[14px] text-gray-300">
+                          Payment Plan
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex gap-x-3 items-center">
+                      <img src={coin} alt="" />
+                      <div>
+                        <p className="text-smaller lg:text-small">
+                          {item.startingPrice}
+                        </p>
+                        <p className="text-[14px] text-gray-300">
+                          Starting Price
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex gap-x-3 items-center">
-                    <img src={coin} alt="" />
-                    <div>
-                      <p className="text-smaller lg:text-small">
-                        {item.startingPrice}
-                      </p>
-                      <p className="text-[14px] text-gray-300">
-                        Starting Price
-                      </p>
-                    </div>
-                  </div>
+                  <Button
+                    bgColor={"bg-primary"}
+                    text={"More Details"}
+                    borderRadius={6}
+                    textColor={"text-white"}
+                    customStyle={"text-tiny ml-2"}
+                    w={"200px"}
+                    h={"50px"}
+                    onClick={() => {
+                      window.open(item.url, "_blank", "noopener,noreferrer");
+                    }}
+                  />
                 </div>
-                <Button
-                  bgColor={"bg-primary"}
-                  text={"More Details"}
-                  borderRadius={6}
-                  textColor={"text-white"}
-                  customStyle={"text-tiny ml-2"}
-                  w={"200px"}
-                  h={"50px"}
-                  onClick={() => {
-                    window.open(item.url, "_blank", "noopener,noreferrer");
-                  }}
-                />
-              </div>
-            );
+              );
           })}
         </Slider>
       </div>
@@ -112,24 +115,26 @@ const Header = () => {
           className="w-full h-full"
         >
           {data.map((item, index) => {
-            return (
-              <img
-                src={item.image}
-                key={index}
-                className="w-full h-[350px] md:h-[420px] xl:h-[500px] 2xl:h-[600px]"
-                alt=""
-              />
-            );
+            if (index < 3)
+              return (
+                <img
+                  src={item.image}
+                  key={index}
+                  className="w-full h-[350px] md:h-[420px] xl:h-[500px] 2xl:h-[600px]"
+                  alt=""
+                />
+              );
           })}
         </Slider>
       </div>
-      <div className="space-y-9 max-md:grid max-md:grid-cols-3 max-md:place-items-center max-md:gap-x-4 absolute top-[52%] sm:top-[47%] right-[2%] md:top-[30%] md:right-[39%] lg:right-[39.6%] xl:right-[39.5%] 2xl:right-[40.3%]">
+      <div className="space-y-9 max-md:grid max-md:grid-cols-3 max-md:place-items-center max-md:gap-x-4 absolute top-[60%] sm:top-[47%] right-[2%] md:top-[30%] md:right-[39%] lg:right-[39.6%] xl:right-[39.5%] 2xl:right-[40.3%]">
         {data.map((item, index) => {
-          return (
-            <div key={index} className="w-full h-full self-end">
-              <Dot id={index} />
-            </div>
-          );
+          if (index < 3)
+            return (
+              <div key={index} className="w-full h-full self-end">
+                <Dot id={index} />
+              </div>
+            );
         })}
       </div>
     </div>

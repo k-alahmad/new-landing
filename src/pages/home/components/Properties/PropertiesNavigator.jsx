@@ -13,6 +13,7 @@ const PropertiesNavigator = ({ selected, setSelected, sliderRef }) => {
             key={index}
             customStyle={"text-white text-tiny md:text-smaller"}
             w={"150px"}
+            h={"60px"}
             onClick={() => {
               setSelected(index);
               sliderRef.current.slickGoTo(index);

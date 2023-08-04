@@ -1,13 +1,6 @@
 import React from "react";
-import kasra from "../../assets/images/aboutus/kasra.webp";
-import maryam from "../../assets/images/aboutus/maryam.webp";
-import dubai from "../../assets/images/aboutus/dubai.webp";
 import GradientText from "../../components/UI/GradientText";
 import aboutIcon from "../../assets/icons/about.svg";
-import teamWorkIcon from "../../assets/icons/teamWork.svg";
-import projectsIcon from "../../assets/icons/projects.svg";
-import facesIcon from "../../assets/icons/faces.svg";
-import developmentIcon from "../../assets/icons/development.svg";
 import Logo from "../../assets/logos/black-logo.svg";
 import { data } from "../../data/aboutUsData";
 const AboutUs = () => {

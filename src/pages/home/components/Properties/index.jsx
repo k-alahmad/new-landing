@@ -52,6 +52,8 @@ const Properties = () => {
                         bathsNumber={i.bathsNumber}
                         bedroomNumber={i.bedroomNumber}
                         startingPrice={i.startingPrice}
+                        name={i.name}
+                        smallDescription={i.smallDescription}
                       />
                     );
                   })}
@@ -59,7 +61,7 @@ const Properties = () => {
                 <div className="md:hidden">
                   <Slider
                     ref={sliderRef}
-                    touchMove={false}
+                    touchMove={true}
                     slidesToShow={2}
                     slidesToScroll={1}
                     dots={true}
@@ -90,6 +92,8 @@ const Properties = () => {
                           bathsNumber={i.bathsNumber}
                           bedroomNumber={i.bedroomNumber}
                           startingPrice={i.startingPrice}
+                          name={i.name}
+                          smallDescription={i.smallDescription}
                         />
                       );
                     })}

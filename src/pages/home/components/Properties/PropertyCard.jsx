@@ -10,6 +10,8 @@ const PropertyCard = ({
   bathsNumber,
   bedroomNumber,
   area,
+  name,
+  smallDescription,
 }) => {
   return (
     <div className="w-full flex justify-center items-center">
@@ -24,8 +26,8 @@ const PropertyCard = ({
             <FaDollarSign />
             {startingPrice}
           </div>
-          <p className="font-semibold text-smaller">{"Property Name"}</p>
-          <p>{"Property small description"}</p>
+          <p className="font-semibold text-smaller">{name}</p>
+          <p>{smallDescription}</p>
           <div className="h-[1px] bg-gray-300 my-2" />
           <br />
           <br />

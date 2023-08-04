@@ -17,11 +17,16 @@ const ProjectDetails = ({
         <div className="max-md:col-span-2">
           <p className="font-semibold text-primary ">Payment Plan</p>
           <ul className="list-disc ml-7">
-            <li>Type: {plan.name}</li>
-            {/* <li>{item.plan.postHandover}</li> */}
-            <li>{plan.onBooking} On Booking</li>
-            <li>{plan.duringConstruction} During Construction</li>
-            <li>{plan.onHandover} On Handover</li>
+            <li>
+              <span className="font-semibold text-secondary">Type: </span>
+              {plan.name}
+            </li>
+            {plan.postHandover && <li>{plan.postHandover} Post Handover</li>}
+            {plan.onBooking && <li>{plan.onBooking} On Booking</li>}
+            {plan.duringConstruction && (
+              <li>{plan.duringConstruction} During Construction</li>
+            )}
+            {plan.onHandover && <li>{plan.onHandover} On Handover</li>}
           </ul>
         </div>
         <div>
