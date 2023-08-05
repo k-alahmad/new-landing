@@ -126,9 +126,9 @@ const RegisterForm = () => {
 			/>
 			<input
 				type='text'
-				className='hidden'
+				className='hidden '
 				name={"project"}
-				value='MeDoRe Project'
+				value='Main Website'
 				readOnly
 			/>
 			<PhoneInput
@@ -142,7 +142,7 @@ const RegisterForm = () => {
 				}}
 				onChange={setPhone}
 				containerClass='!border-b-[1px] border-gray-300 px-1 flex '
-				inputClass={`!bg-transparent !w-full !text-lg !h-full !border-none  ${
+				inputClass={`!bg-transparent !text-offWhite !w-full !text-lg !h-full !border-none  ${
 					i18n.language == "en" ? "px-0" : "mx-10"
 				} !outline-none`}
 				buttonClass={`!border-none !text-lg `}
