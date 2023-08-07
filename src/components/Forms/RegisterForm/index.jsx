@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { useDispatch, useSelector } from "react-redux";
 import { MdMail, MdPerson } from "react-icons/md";
 import PhoneInput from "react-phone-input-2";
@@ -62,14 +62,17 @@ const RegisterForm = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
+					window.location.reload(false);
 				},
 				(error) => {
 					console.log(error.text);
+					alert("Registration Failed!");
 				},
 			);
 	};
 	const handleSubmit = async (e) => {
-		e.preventDefault();
+		// e.preventDefault();
+		sendEmail(e);
 		// let formData = new FormData(form.current);
 		// try {
 		//   const response = await fetch(
