@@ -52,21 +52,21 @@ const RegisterForm = () => {
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-		// emailjs
-		//   .sendForm(
-		//     "service_5wdnu6j",
-		//     "template_slqqcpm",
-		//     form.current,
-		//     "sxh5TJan60LQqD6Sw"
-		//   )
-		//   .then(
-		//     (result) => {
-		//       console.log(result.text);
-		//     },
-		//     (error) => {
-		//       console.log(error.text);
-		//     }
-		//   );
+		emailjs
+			.sendForm(
+				"service_5wdnu6j",
+				"template_slqqcpm",
+				form.current,
+				"sxh5TJan60LQqD6Sw",
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				},
+			);
 	};
 	const handleSubmit = async (e) => {
 		e.preventDefault();
