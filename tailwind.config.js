@@ -38,6 +38,7 @@ export default {
       backgroundImage: {
         headerBg: "url(./src/assets/images/home/headerBg.png)",
         contactLinesBg: "url(./src/assets/images/home/contactLines.svg)",
+        membersLinesBg: "url(./src/assets/images/aboutus/members-lines.svg)",
       },
       backgroundColor: {
         redss:
