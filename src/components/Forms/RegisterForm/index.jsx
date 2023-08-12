@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { useDispatch, useSelector } from "react-redux";
 import { MdMail, MdPerson } from "react-icons/md";
 import PhoneInput from "react-phone-input-2";
@@ -52,24 +52,27 @@ const RegisterForm = () => {
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-		// emailjs
-		//   .sendForm(
-		//     "service_5wdnu6j",
-		//     "template_slqqcpm",
-		//     form.current,
-		//     "sxh5TJan60LQqD6Sw"
-		//   )
-		//   .then(
-		//     (result) => {
-		//       console.log(result.text);
-		//     },
-		//     (error) => {
-		//       console.log(error.text);
-		//     }
-		//   );
+		emailjs
+			.sendForm(
+				"service_5wdnu6j",
+				"template_slqqcpm",
+				form.current,
+				"sxh5TJan60LQqD6Sw",
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+					window.location.reload(false);
+				},
+				(error) => {
+					console.log(error.text);
+					alert("Registration Failed!");
+				},
+			);
 	};
 	const handleSubmit = async (e) => {
-		e.preventDefault();
+		// e.preventDefault();
+		sendEmail(e);
 		// let formData = new FormData(form.current);
 		// try {
 		//   const response = await fetch(
@@ -126,9 +129,9 @@ const RegisterForm = () => {
 			/>
 			<input
 				type='text'
-				className='hidden'
+				className='hidden '
 				name={"project"}
-				value='MeDoRe Project'
+				value='Main Website'
 				readOnly
 			/>
 			<PhoneInput
@@ -142,7 +145,7 @@ const RegisterForm = () => {
 				}}
 				onChange={setPhone}
 				containerClass='!border-b-[1px] border-gray-300 px-1 flex '
-				inputClass={`!bg-transparent !w-full !text-lg !h-full !border-none  ${
+				inputClass={`!bg-transparent !text-offWhite !w-full !text-lg !h-full !border-none  ${
 					i18n.language == "en" ? "px-0" : "mx-10"
 				} !outline-none`}
 				buttonClass={`!border-none !text-lg `}
