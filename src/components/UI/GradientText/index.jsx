@@ -4,7 +4,7 @@ const GradientText = ({ text, customStyle }) => {
   return (
     <p
       style={{
-        background: "linear-gradient(120.27deg, #161535, 10%, #AA8A3A 100%)",
+        background: " linear-gradient(316deg, #DDB26E 0%, #161535 100%)",
         backgroundClip: "text",
         WebkitBackgroundClip: "text",
         color: "transparent",

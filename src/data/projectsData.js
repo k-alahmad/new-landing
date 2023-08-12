@@ -19,12 +19,15 @@ export const data = [
     title: "Unveil A Soul-Stirring Experience",
     description:
       "As You Surrender To The Enchanting Call Of The Water In Your Vicinity",
-    plan: {
-      name: "Post-handover",
-      onBooking: "20%",
-      duringConstruction: "60%",
-      onHandover: "20%",
-    },
+    plan: "Post-handover",
+    plans: [
+      {
+        name: "Post-handover",
+        onBooking: "20%",
+        duringConstruction: "60%",
+        onHandover: "20%",
+      },
+    ],
     startingPrice: "1.2M AED",
     url: "https://330riverside.avarealestate.ae/en",
     location: "Nad Al Sheba 1",
@@ -65,12 +68,28 @@ export const data = [
     title: "Ready to Move Luxury Apartment",
     description:
       "Residents can wake up to the serene views of the water every morning. With a flexible post-handover payment plan option available, owning your dream home",
-    plan: {
-      name: "2 Years Post-handover",
-      onBooking: "20%",
-      onHandover: "30%",
-      postHandover: "50%",
-    },
+    plan: "2 Years Post-handover",
+
+    plans: [
+      {
+        name: "2 Years Post-handover",
+        onBooking: "20%",
+        onHandover: "30%",
+        postHandover: "50%",
+      },
+      {
+        name: "2 Years Post-handover",
+        onBooking: "20%",
+        onHandover: "30%",
+        postHandover: "50%",
+      },
+      {
+        name: "2 Years Post-handover",
+        onBooking: "20%",
+        onHandover: "30%",
+        postHandover: "50%",
+      },
+    ],
     startingPrice: "1.5M AED",
     url: "https://jltproject.avarealestate.ae/",
     location: "location",
@@ -110,12 +129,15 @@ export const data = [
     image: picAmber,
     title: "Living In Your Dream Home Isn't Far Away!",
     description: "Move In Next Year.",
-    plan: {
-      name: "Handover plan",
-      onBooking: "20%",
-      duringConstruction: "50%",
-      onHandover: "30%",
-    },
+    plan: "Handover plan",
+    plans: [
+      {
+        name: "Handover plan",
+        onBooking: "20%",
+        duringConstruction: "50%",
+        onHandover: "30%",
+      },
+    ],
     startingPrice: "598K AED",
     url: "https://amber.avarealestate.ae/",
     location: "JVC",
@@ -155,12 +177,14 @@ export const data = [
     image: picAmber,
     title: "Up to five years payment plan",
     description: "With only a 10% down payment and 1% monthly installment",
-    plan: {
-      name: "Post-Handover for 2 Years",
-      onBooking: "10%",
-      duringConstruction: "60%",
-      postHandover: "30%",
-    },
+    plans: [
+      {
+        name: "Post-Handover for 2 Years",
+        onBooking: "10%",
+        duringConstruction: "60%",
+        postHandover: "30%",
+      },
+    ],
     startingPrice: "550K AED",
     url: "https://www.instagram.com/reel/CvewXO1PyIE/?igshid=MzRlODBiNWFlZA==",
     location: "JVT",

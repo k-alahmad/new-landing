@@ -10,7 +10,7 @@ const Properties = () => {
   const [selected, setSelected] = useState(0);
   const sliderRef = useRef();
   return (
-    <div className="px-[5%]">
+    <div className="rounded-md mx-[2%] lg:mx-[5%] px-[2%] -mt-10 lg:-mt-24 relative bg-white">
       <PropertiesNavigator
         selected={selected}
         setSelected={setSelected}
@@ -18,7 +18,7 @@ const Properties = () => {
       />
       <div
         style={{
-          width: width - (width * 10) / 100,
+          width: width - (width * 11) / 100,
           maxWidth: "1920px",
         }}
       >
@@ -35,69 +35,77 @@ const Properties = () => {
           {data.map((item, index) => {
             return (
               <div key={index}>
-                <ProjectDetails
-                  title={item.title}
-                  description={item.description}
-                  plan={item.plan}
-                  location={item.location}
-                  startingPrice={item.startingPrice}
-                />
-                <div className="md:grid md:grid-cols-3 mt-12 max-md:hidden">
-                  {item.propertes.map((i, idx) => {
-                    return (
-                      <PropertyCard
-                        image={i.image}
-                        key={idx}
-                        area={i.area}
-                        bathsNumber={i.bathsNumber}
-                        bedroomNumber={i.bedroomNumber}
-                        startingPrice={i.startingPrice}
-                        name={i.name}
-                        smallDescription={i.smallDescription}
-                      />
-                    );
-                  })}
-                </div>
-                <div className="md:hidden">
-                  <Slider
-                    ref={sliderRef}
-                    touchMove={true}
-                    slidesToShow={2}
-                    slidesToScroll={1}
-                    dots={true}
-                    arrows={false}
-                    infinite={false}
-                    autoplay={false}
-                    responsive={[
-                      {
-                        breakpoint: 1000,
-                        settings: {
-                          slidesToShow: 2,
+                <div className="lg:grid lg:grid-cols-12 gap-x-5 lg:mt-12">
+                  <div className="col-span-5">
+                    <ProjectDetails
+                      title={item.title}
+                      description={item.description}
+                      // plan={item.plan}
+                      plans={item.plans}
+                      location={item.location}
+                      startingPrice={item.startingPrice}
+                    />
+                  </div>
+
+                  <div className="col-span-7 max-lg:mt-7">
+                    <Slider
+                      touchMove={true}
+                      slidesToShow={2}
+                      slidesToScroll={2}
+                      dots={true}
+                      arrows={false}
+                      infinite={false}
+                      autoplay={false}
+                      responsive={[
+                        {
+                          breakpoint: 3000,
+                          settings: {
+                            slidesToShow: 2,
+                            rows: 2,
+                          },
                         },
-                      },
-                      {
-                        breakpoint: 590,
-                        settings: {
-                          slidesToShow: 1,
+                        {
+                          breakpoint: 1000,
+                          settings: {
+                            slidesToShow: 2,
+                          },
                         },
-                      },
-                    ]}
-                  >
-                    {item.propertes.map((i, idx) => {
-                      return (
-                        <PropertyCard
-                          image={i.image}
-                          key={idx}
-                          area={i.area}
-                          bathsNumber={i.bathsNumber}
-                          bedroomNumber={i.bedroomNumber}
-                          startingPrice={i.startingPrice}
-                          name={i.name}
-                          smallDescription={i.smallDescription}
-                        />
-                      );
-                    })}
-                  </Slider>
+                        {
+                          breakpoint: 590,
+                          settings: {
+                            slidesToShow: 1,
+                            centerMode: true,
+                            centerPadding: "60px",
+                          },
+                        },
+                        {
+                          breakpoint: 400,
+                          settings: {
+                            slidesToShow: 1,
+                            centerMode: true,
+                            centerPadding: "20px",
+                          },
+                        },
+                      ]}
+                      className="w-full h-full"
+                    >
+                      {item.propertes.map((i, idx) => {
+                        return (
+                          <div key={idx} className="mb-5">
+                            <PropertyCard
+                              image={i.image}
+                              area={i.area}
+                              bathsNumber={i.bathsNumber}
+                              bedroomNumber={i.bedroomNumber}
+                              startingPrice={i.startingPrice}
+                              name={i.name}
+                              smallDescription={i.smallDescription}
+                            />
+                          </div>
+                        );
+                      })}
+                    </Slider>
+                  </div>
                 </div>
               </div>
             );

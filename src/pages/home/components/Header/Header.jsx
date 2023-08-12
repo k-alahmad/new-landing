@@ -27,7 +27,7 @@ const Header = () => {
     );
   };
   return (
-    <div className="md:grid md:grid-cols-12 gap-0 xl:h-[500px] 2xl:h-[600px] relative">
+    <div className="md:grid md:grid-cols-12 gap-0 xl:h-[600px] 2xl:h-[700px] relative">
       <div className="col-span-7 bg-headerBg text-white bg-[#161535] bg-center bg-no-repeat bg-cover max-md:pt-24">
         <Slider
           ref={sliderRef1}
@@ -63,7 +63,7 @@ const Header = () => {
                       <img src={wallet} alt="" />
                       <div>
                         <p className="text-smaller lg:text-small">
-                          {item.plan.name}
+                          {item.plan}
                         </p>
                         <p className="text-[14px] text-gray-300">
                           Payment Plan
@@ -120,7 +120,7 @@ const Header = () => {
                 <img
                   src={item.image}
                   key={index}
-                  className="w-full h-[350px] md:h-[420px] xl:h-[500px] 2xl:h-[600px]"
+                  className="w-full h-[450px] md:h-[470px] lg:[520px] xl:h-[600px] 2xl:h-[700px]"
                   alt=""
                 />
               );
