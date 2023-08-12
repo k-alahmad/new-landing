@@ -75,7 +75,7 @@ const Properties = () => {
                           settings: {
                             slidesToShow: 1,
                             centerMode: true,
-                            centerPadding: "60px",
+                            centerPadding: "30px",
                           },
                         },
                         {

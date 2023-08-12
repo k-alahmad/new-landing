@@ -55,7 +55,7 @@ const ProjectDetails = ({
                 },
               },
               {
-                breakpoint: 1000,
+                breakpoint: 1100,
                 settings: {
                   slidesToShow: 2,
                 },
@@ -83,7 +83,7 @@ const ProjectDetails = ({
               return (
                 <div
                   key={index}
-                  className="bg-gray-200 max-w-[260px] sm:max-w-[350px] rounded-md px-6 py-8 text-smaller space-y-6"
+                  className="bg-gray-200 max-w-[90%] mb-5 rounded-md px-6 py-8 text-smaller space-y-6"
                 >
                   <div className="flex items-center gap-4">
                     <img src={medal} className="h-6 w-6" alt="" />

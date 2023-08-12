@@ -9,7 +9,7 @@ const About = () => {
         style={{
           backgroundImage: `url(${dubaiImage})`,
         }}
-        className="rounded-md bg-no-repeat bg-cover bg-center h-[500px]"
+        className="rounded-md bg-no-repeat bg-cover bg-center md:h-[500px]"
       >
         <div className="bg-black/50 h-full p-[5%]">
           <img src={logo} alt="AVA Logo" className="w-32 h-32" />
