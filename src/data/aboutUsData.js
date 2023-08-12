@@ -7,7 +7,6 @@ import projectsIcon from "../assets/icons/projects.svg";
 import facesIcon from "../assets/icons/faces.svg";
 import developmentIcon from "../assets/icons/development.svg";
 import Logo from "../assets/logos/black-logo.svg";
-import { m } from "framer-motion";
 export const data = {
   headerTitle: "Get to know us closely and what we excel at",
   mission: {
