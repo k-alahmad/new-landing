@@ -32,27 +32,27 @@ const CustomInput = ({
     </div>
   ) : type == "radio" ? (
     <div className="flex max-md:flex-col justify-start items-center gap-x-4 bg-white rounded-md shadow-sm drop-shadow-sm px-4 py-4 ">
-      <p className="text-tiny font-semibold max-md:py-2">{placeholder}</p>
+      <p className="text-tiny font-semibold max-md:py-2 max-md:self-start">
+        {placeholder}
+      </p>
 
       <div className={`${radiosViewType}`}>
         {radios.map((item, index) => {
           return (
-            <div
-              key={index}
-              className={`flex items-center justify-start gap-x-1 ${item.customStyle}`}
-            >
+            <div key={index} className={`${item.customStyle}`}>
               <input
                 type="radio"
                 name={item.name}
                 value={item.value}
-                id={item.name}
+                id={item.id}
                 checked={item.checked}
                 onChange={onChange}
                 style={{
                   accentColor: "#AA8A3A",
                 }}
+                className="mr-2"
               />
-              <label htmlFor="regular" onClick={onChange}>
+              <label htmlFor={item.id} className="" onClick={onChange}>
                 {item.placeholder}
               </label>
             </div>
@@ -109,11 +109,7 @@ const JobForm = () => {
       const serviceId = "service_5wdnu6j";
       const templateId = "template_tl2vjv3";
       const userId = "sxh5TJan60LQqD6Sw";
-      const emailParams = {
-        ...form,
-        cv: reader.result,
-      };
-      emailjs.send(serviceId, templateId, emailParams, userId).then(
+      emailjs.sendForm(serviceId, templateId, formRef.current, userId).then(
         (result) => {
           console.log(result.text);
           setLoading(false);
@@ -197,7 +193,7 @@ const JobForm = () => {
             required: true,
           }}
           onChange={(e) => setForm({ ...form, phone_No: e })}
-          containerClass="bg-white !rounded-md shadow-sm drop-shadow-sm  px-1 flex"
+          containerClass="bg-white !rounded-md shadow-sm drop-shadow-sm px-1 flex z-10"
           inputClass={`!bg-transparent !text-black !w-full !text-lg !h-full !border-none px-0 !outline-none`}
           buttonClass={`!border-none !text-lg `}
           buttonStyle={{ direction: "ltr" }}
@@ -222,49 +218,58 @@ const JobForm = () => {
       />
       <div />
       <CustomInput
-        radiosViewType={"grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2"}
+        radiosViewType={
+          "grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 max-md:w-full"
+        }
         placeholder={"Field:"}
         type="radio"
         onChange={handleChange}
         radios={[
           {
             name: "field",
-            value: "offPlan",
-            checked: form.field == "offPlan",
+            value: "Off Plan",
+            checked: form.field == "Off Plan",
             placeholder: "Off Plan",
+            id: "Off Plan",
           },
           {
             name: "field",
-            value: "rent",
-            checked: form.field == "rent",
+            value: "Rent",
+            checked: form.field == "Rent",
             placeholder: "Rent",
+            id: "Rent",
           },
           {
             name: "field",
-            value: "secMarket",
-            checked: form.field == "secMarket",
+            value: "Secondary Market",
+            checked: form.field == "Secondary Market",
             placeholder: "Secondary Market",
+            id: "Secondary Market",
             customStyle: "max-md:col-span-full",
           },
         ]}
       />
       <CustomInput
-        radiosViewType={"grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2"}
+        radiosViewType={
+          "grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2 max-md:w-full"
+        }
         placeholder={"Gender:"}
         type="radio"
         onChange={handleChange}
         radios={[
           {
             name: "gender",
-            value: "male",
-            checked: form.gender == "male",
+            value: "Male",
+            checked: form.gender == "Male",
             placeholder: "Male",
+            id: "Male",
           },
           {
             name: "gender",
-            value: "female",
-            checked: form.gender == "female",
+            value: "Female",
+            checked: form.gender == "Female",
             placeholder: "Female",
+            id: "Female",
           },
         ]}
       />
@@ -279,39 +284,45 @@ const JobForm = () => {
           radios={[
             {
               name: "lvl_english",
-              value: "NoProficiency",
-              checked: form.lvl_english == "NoProficiency",
+              value: "No proficiency",
+              checked: form.lvl_english == "No proficiency",
               placeholder: "0 - No proficiency",
+              id: "Noproficiencyen",
             },
             {
               name: "lvl_english",
-              value: "ElementaryProficiency",
-              checked: form.lvl_english == "ElementaryProficiency",
+              value: "Elementary proficiency",
+              checked: form.lvl_english == "Elementary proficiency",
               placeholder: "1 - Elementary proficiency",
+              id: "Elementaryproficiencyen",
             },
             {
               name: "lvl_english",
-              value: "LimitedWorkingProficiency",
-              checked: form.lvl_english == "LimitedWorkingProficiency",
+              value: "Limited working proficiency",
+              checked: form.lvl_english == "Limited working proficiency",
               placeholder: "2 - Limited working proficiency",
+              id: "Limitedworkingproficiencyen",
             },
             {
               name: "lvl_english",
-              value: "ProfessionalWorkingProficiency",
-              checked: form.lvl_english == "ProfessionalWorkingProficiency",
+              value: "Professional working proficiency",
+              checked: form.lvl_english == "Professional working proficiency",
               placeholder: "3 - Professional working proficiency",
+              id: "Professionalworkingproficiencyen",
             },
             {
               name: "lvl_english",
-              value: "FullProfessionalProficiency",
-              checked: form.lvl_english == "FullProfessionalProficiency",
+              value: "Full professional proficiency",
+              checked: form.lvl_english == "Full professional proficiency",
               placeholder: "4 - Full professional proficiency",
+              id: "Fullprofessionalproficiencyen",
             },
             {
               name: "lvl_english",
               value: "PrimaryFluency",
-              checked: form.lvl_english == "PrimaryFluency",
-              placeholder: "5 - Primary fluency/ Native",
+              checked: form.lvl_english == "Primary fluency / Native",
+              placeholder: "5 - Primary fluency / Native",
+              id: "Primaryfluency/Nativeen",
             },
           ]}
         />
@@ -327,39 +338,45 @@ const JobForm = () => {
           radios={[
             {
               name: "lvl_arabic",
-              value: "NoProficiency",
-              checked: form.lvl_arabic == "NoProficiency",
+              value: "No proficiency",
+              checked: form.lvl_arabic == "No proficiency",
               placeholder: "0 - No proficiency",
+              id: "Noproficiencyar",
             },
             {
               name: "lvl_arabic",
-              value: "ElementaryProficiency",
-              checked: form.lvl_arabic == "ElementaryProficiency",
+              value: "Elementary proficiency",
+              checked: form.lvl_arabic == "Elementary proficiency",
               placeholder: "1 - Elementary proficiency",
+              id: "Elementaryproficiencyar",
             },
             {
               name: "lvl_arabic",
-              value: "LimitedWorkingProficiency",
-              checked: form.lvl_arabic == "LimitedWorkingProficiency",
+              value: "Limited working proficiency",
+              checked: form.lvl_arabic == "Limited working proficiency",
               placeholder: "2 - Limited working proficiency",
+              id: "Limitedworkingproficiencyar",
             },
             {
               name: "lvl_arabic",
-              value: "ProfessionalWorkingProficiency",
-              checked: form.lvl_arabic == "ProfessionalWorkingProficiency",
+              value: "Professional working proficiency",
+              checked: form.lvl_arabic == "Professional working proficiency",
               placeholder: "3 - Professional working proficiency",
+              id: "Professionalworkingproficiencyar",
             },
             {
               name: "lvl_arabic",
-              value: "FullProfessionalProficiency",
-              checked: form.lvl_arabic == "FullProfessionalProficiency",
+              value: "Full professional proficiency",
+              checked: form.lvl_arabic == "Full professional proficiency",
               placeholder: "4 - Full professional proficiency",
+              id: "Fullprofessionalproficiencyar",
             },
             {
               name: "lvl_arabic",
               value: "PrimaryFluency",
-              checked: form.lvl_arabic == "PrimaryFluency",
-              placeholder: "5 - Primary fluency/ Native",
+              checked: form.lvl_arabic == "Primary fluency / Native",
+              placeholder: "5 - Primary fluency / Native",
+              id: "Primaryfluency/Nativear",
             },
           ]}
         />
@@ -373,7 +390,7 @@ const JobForm = () => {
         onChange={handleChange}
       />
       <CustomInput
-        placeholder={"Approximate Value Of Last Year Closing Deal"}
+        placeholder={"Approximate Value Of Last Year Closing Deal (AED)"}
         type="text"
         name="closing_deal"
         value={form.closing_deal}
@@ -395,6 +412,7 @@ const JobForm = () => {
           <input
             type="file"
             // accept="images/*"
+            name="cv"
             onChange={onFileChange}
             style={{ display: "none" }}
             ref={hiddenFileInput}

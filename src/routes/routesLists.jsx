@@ -6,7 +6,7 @@ export const publicRoutes = [
     element: lazy(() => import("../pages/aboutUs/index.jsx")),
   },
   {
-    path: "/job-app",
+    path: "/jobs",
     element: lazy(() => import("../pages/JobApplication/index.jsx")),
   },
   {
