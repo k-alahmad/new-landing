@@ -21,6 +21,7 @@ i18n.use(initReactI18next).init({
         formPhoneNumber: "رقم الموبايل",
         formEmail: "الايميل",
         AboutUs: "من نحن",
+        JoinUs: "انضم لنا",
       },
     },
     en: {
@@ -40,6 +41,7 @@ i18n.use(initReactI18next).init({
         formPhoneNumber: "Phone Number",
         formEmail: "Email",
         AboutUs: "About Us",
+        JoinUs: "Join Us",
       },
     },
   },

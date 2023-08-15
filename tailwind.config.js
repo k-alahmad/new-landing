@@ -20,20 +20,11 @@ export default {
         EXBOLD: "LAMASANSEXTRABOLD", //800
       },
       colors: {
-        white: "#FFFFFF",
-        lightBlack: "#222222",
-        grey: "#F0F0F0",
         offWhite: "#F1F1F1",
-        lightGrey: "rgba(182, 182, 182, 1)",
-        WhiteOP: "rgba(255, 255, 255, 0.5)",
-        lightGreyOP: "rgba(182, 182, 182, 0.7)",
-        gradiant:
-          "linear-gradient(to right,rgba(21, 152, 149, 1) , rgba(39, 225, 193, 1)",
-        darkBlue: "#231A36",
-        sharpBlue: "#002B5B",
-        /////////
+
         primary: "#AA8A3A",
         secondary: "#161535",
+        third: "#F4F4F4",
       },
       backgroundImage: {
         headerBg: "url(./src/assets/images/home/headerBg.png)",

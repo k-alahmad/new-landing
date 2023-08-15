@@ -47,7 +47,9 @@ const NavBarT2 = () => {
             background:
               header === "white"
                 ? "#161535"
-                : location.pathname == "/" || location.pathname == "/about-us"
+                : location.pathname == "/" ||
+                  location.pathname == "/about-us" ||
+                  location.pathname == "/job-app"
                 ? "transparent"
                 : "#161535",
           }}

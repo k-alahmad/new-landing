@@ -3,6 +3,7 @@ import GradientText from "../../components/UI/GradientText";
 import aboutIcon from "../../assets/icons/about.svg";
 import Logo from "../../assets/logos/black-logo.svg";
 import { data } from "../../data/aboutUsData";
+import Header from "./components/Header";
 const AboutUs = () => {
   const MissionCard = ({ title, text, icon }) => {
     return (
@@ -50,14 +51,7 @@ const AboutUs = () => {
   };
   return (
     <div>
-      <div className="h-[380px] md:h-[400px] xl:h-[500px] 2xl:h-[600px] flex justify-center items-center bg-headerBg bg-secondary bg-no-repeat bg-cover bg-center">
-        <GradientText
-          text={data.headerTitle}
-          customStyle={
-            "text-center text-big 2xl:text-bigger font-bold text-primary w-[90%] md:w-[50%]"
-          }
-        />
-      </div>
+      <Header />
       <div className="max-md:flex max-md:flex-col max-md:justify-center max-md:items-center md:grid md:grid-cols-12 gap-7 mt-20 max-md:px-[5%] ">
         <div className="col-span-5 w-[85%] md:w-[90%] 2xl:w-[80%] relative place-self-center">
           <div

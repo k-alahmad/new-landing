@@ -6,6 +6,10 @@ export const publicRoutes = [
     element: lazy(() => import("../pages/aboutUs/index.jsx")),
   },
   {
+    path: "/job-app",
+    element: lazy(() => import("../pages/JobApplication/index.jsx")),
+  },
+  {
     path: "/privacy-policy",
     element: lazy(() => import("../pages/privacy/index.jsx")),
   },

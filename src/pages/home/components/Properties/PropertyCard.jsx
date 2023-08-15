@@ -29,8 +29,8 @@ const PropertyCard = ({
           <p className="font-semibold text-smaller">{name}</p>
           <p>{smallDescription}</p>
         </div>
-        <div className="h-[1px] bg-gray-300 my-2" />
-        <br />
+        {/* <div className="h-[1px] bg-gray-300 my-2" />
+        <br /> */}
       </div>
       <div className="bg-[#E7E7E7] px-3 py-2 flex justify-evenly items-center font-bold text-[18px] rounded-b-md">
         <div className="flex flex-col items-center justify-center space-y-1">
