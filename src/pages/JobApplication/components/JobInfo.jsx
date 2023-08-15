@@ -6,7 +6,7 @@ import fulltimeIcon from "../../../assets/icons/fulltime-icon.svg";
 import medalIcon from "../../../assets/icons/yellowMedal.svg";
 const JobInfo = () => {
   return (
-    <div className="flex justify-start items-start gap-x-5 bg-third w-full rounded-md p-8">
+    <div className="flex justify-start items-start gap-x-5 bg-third w-full rounded-md p-8 shadow-md">
       <div className="bg-white/60 p-3 rounded-full max-md:hidden ">
         <img src={jobIcon} className="rounded-full p-2 bg-white" alt="" />
       </div>

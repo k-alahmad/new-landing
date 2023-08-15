@@ -165,7 +165,7 @@ const JobForm = () => {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="mt-8 p-8 w-full lg:grid grid-cols-2 gap-x-5 space-y-8 bg-third rounded-md "
+      className="mt-8 p-8 w-full lg:grid grid-cols-2 gap-x-5 space-y-8 bg-third rounded-md shadow-md"
     >
       <p className="text-med font-semibold p-4 self-start lg:col-span-2">
         Apply For The Job
