@@ -184,7 +184,8 @@ const JobForm = () => {
         value={form.email}
         onChange={handleChange}
       />
-      <div>
+      <div className="space-y-1">
+        <p className="text-tiny font-semibold px-2">{"Phone Number"} </p>
         <PhoneInput
           country={"ae"}
           placeholder={"Phone Number"}
@@ -222,7 +223,7 @@ const JobForm = () => {
       <div />
       <CustomInput
         radiosViewType={"grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2"}
-        placeholder={"Field"}
+        placeholder={"Field:"}
         type="radio"
         onChange={handleChange}
         radios={[
@@ -249,7 +250,7 @@ const JobForm = () => {
       />
       <CustomInput
         radiosViewType={"grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2"}
-        placeholder={"Gender"}
+        placeholder={"Gender:"}
         type="radio"
         onChange={handleChange}
         radios={[
@@ -272,7 +273,7 @@ const JobForm = () => {
           radiosViewType={
             "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1"
           }
-          placeholder={"English Level"}
+          placeholder={"English Level:"}
           type="radio"
           onChange={handleChange}
           radios={[
@@ -320,7 +321,7 @@ const JobForm = () => {
           radiosViewType={
             "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1"
           }
-          placeholder={"Arabic Level"}
+          placeholder={"Arabic Level:"}
           type="radio"
           onChange={handleChange}
           radios={[
