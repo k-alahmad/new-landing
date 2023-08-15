@@ -76,6 +76,7 @@ let defaultFormState = {
 const JobForm = () => {
   const [form, setForm] = useState(defaultFormState);
   const [file, setFile] = useState();
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({
@@ -96,6 +97,7 @@ const JobForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    setLoading(true);
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = async (e) => {
@@ -110,11 +112,13 @@ const JobForm = () => {
       emailjs.send(serviceId, templateId, emailParams, userId).then(
         (result) => {
           console.log(result.text);
+          setLoading(false);
           alert("Thank You!");
           // window.location.reload(false);
         },
         (error) => {
           console.log(error.text);
+          setLoading(false);
           alert("Registration Failed!");
         }
       );
@@ -368,6 +372,7 @@ const JobForm = () => {
         <div className="md:flex items-center md:gap-4">
           <Button
             textColor={"text-white font-medium"}
+            w={"200px"}
             text={"Upload CV"}
             bgColor={"bg-primary"}
             customStyle={"py-2 px-4"}
@@ -386,7 +391,7 @@ const JobForm = () => {
           <p>{form.cv?.name} </p>
         </div>
         <button
-          className="text-white font-medium bg-secondary py-2 px-4 rounded-[27px] text-center text-smaller disabled:bg-gray-500"
+          className="text-white font-medium bg-secondary py-2 px-4 rounded-[27px] text-center text-smaller disabled:bg-gray-500 w-[200px]"
           type="submit"
           disabled={
             form.full_name == "" ||
@@ -402,7 +407,7 @@ const JobForm = () => {
             form.cv == ""
           }
         >
-          Send
+          {!loading ? "Send" : <div className="animate-bounce">Sending...</div>}
         </button>
       </div>
     </form>
