@@ -12,15 +12,18 @@ const CustomInput = ({
   onChange,
   radios,
   radiosViewType,
+  required,
 }) => {
   return type == "text" || type == "email" || type == "number" ? (
     <div className="space-y-1">
-      <p className="text-tiny font-semibold px-2">{placeholder} </p>
+      <p className="text-tiny font-semibold px-2">
+        {placeholder + (required ? "*" : "")}
+      </p>
       <div className="bg-white rounded-md px-4 py-4 flex items-center gap-x-2 shadow-sm drop-shadow-sm w-full">
         {icon}
 
         <input
-          placeholder={placeholder}
+          placeholder={placeholder + (required ? "*" : "")}
           type={type}
           className="bg-transparent px-2 w-full outline-none flex-1"
           name={name}
@@ -33,7 +36,7 @@ const CustomInput = ({
   ) : type == "radio" ? (
     <div className="flex max-md:flex-col justify-start items-center gap-x-4 bg-white rounded-md shadow-sm drop-shadow-sm px-4 py-4 ">
       <p className="text-tiny font-semibold max-md:py-2 max-md:self-start">
-        {placeholder}
+        {placeholder + (required ? "*" : "")}
       </p>
 
       <div className={`${radiosViewType}`}>
@@ -115,12 +118,13 @@ const JobForm = () => {
           setLoading(false);
           alert("Thank You!");
           setForm(defaultFormState);
-          // window.location.reload(false);
+          window.location.reload(false);
         },
         (error) => {
           console.log(error.text);
           setLoading(false);
           alert("Somthing went wrong, please try again!");
+          window.location.reload(false);
         }
       );
     };
@@ -172,6 +176,7 @@ const JobForm = () => {
         name="full_name"
         value={form.full_name}
         onChange={handleChange}
+        required
       />
       <CustomInput
         placeholder={"Email"}
@@ -179,9 +184,10 @@ const JobForm = () => {
         name="email"
         value={form.email}
         onChange={handleChange}
+        required
       />
       <div className="space-y-1">
-        <p className="text-tiny font-semibold px-2">{"Phone Number"} </p>
+        <p className="text-tiny font-semibold px-2">{"Phone Number*"} </p>
         <PhoneInput
           country={"ae"}
           placeholder={"Phone Number"}
@@ -208,6 +214,7 @@ const JobForm = () => {
         name="years_experience"
         value={form.years_experience}
         onChange={handleChange}
+        required
       />
       <CustomInput
         placeholder={"Area"}
@@ -215,6 +222,7 @@ const JobForm = () => {
         name="area"
         value={form.area}
         onChange={handleChange}
+        required
       />
       <div />
       <CustomInput
@@ -248,6 +256,7 @@ const JobForm = () => {
             customStyle: "max-md:col-span-full",
           },
         ]}
+        required
       />
       <CustomInput
         radiosViewType={
@@ -272,6 +281,7 @@ const JobForm = () => {
             id: "Female",
           },
         ]}
+        required
       />
       <div className="lg:col-span-2">
         <CustomInput
@@ -319,12 +329,13 @@ const JobForm = () => {
             },
             {
               name: "lvl_english",
-              value: "PrimaryFluency",
+              value: "Primary fluency / Native",
               checked: form.lvl_english == "Primary fluency / Native",
               placeholder: "5 - Primary fluency / Native",
               id: "Primaryfluency/Nativeen",
             },
           ]}
+          required
         />
       </div>
       <div className="lg:col-span-2">
@@ -373,12 +384,13 @@ const JobForm = () => {
             },
             {
               name: "lvl_arabic",
-              value: "PrimaryFluency",
+              value: "Primary fluency / Native",
               checked: form.lvl_arabic == "Primary fluency / Native",
               placeholder: "5 - Primary fluency / Native",
               id: "Primaryfluency/Nativear",
             },
           ]}
+          required
         />
       </div>
 
@@ -395,6 +407,7 @@ const JobForm = () => {
         name="closing_deal"
         value={form.closing_deal}
         onChange={handleChange}
+        required
       />
       <div className="col-span-full flex max-sm:flex-col justify-between items-center">
         <div className="md:flex items-center md:gap-4">
