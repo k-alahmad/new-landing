@@ -7,7 +7,7 @@ import medalIcon from "../../../assets/icons/yellowMedal.svg";
 const JobInfo = () => {
   return (
     <div className="flex justify-start items-start gap-x-5 bg-third w-full rounded-md p-8">
-      <div className="bg-white/60 p-3 rounded-full ">
+      <div className="bg-white/60 p-3 rounded-full max-md:hidden ">
         <img src={jobIcon} className="rounded-full p-2 bg-white" alt="" />
       </div>
 
@@ -16,7 +16,7 @@ const JobInfo = () => {
           customStyle={"font-bold text-big"}
           text={"Real Estate Consultant"}
         />
-        <div className="flex justify-start items-center gap-5 font-semibold">
+        <div className="flex max-md:flex-col justify-start md:items-center gap-3 md:gap-5 font-semibold">
           <div className="flex items-center gap-2">
             <img src={locationIcon} alt="" />
             <p>Dubai, United Arab Emirates</p>

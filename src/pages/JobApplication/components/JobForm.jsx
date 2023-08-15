@@ -14,27 +14,33 @@ const CustomInput = ({
   radiosViewType,
 }) => {
   return type == "text" || type == "email" || type == "number" ? (
-    <div className="bg-white rounded-md px-4 py-4 flex items-center shadow-sm drop-shadow-sm w-full">
-      {icon}
-      <p className="text-tiny text-gray-400">{placeholder} </p>
+    <div className="space-y-1">
+      <p className="text-tiny font-semibold px-2">{placeholder} </p>
+      <div className="bg-white rounded-md px-4 py-4 flex items-center gap-x-2 shadow-sm drop-shadow-sm w-full">
+        {icon}
 
-      <input
-        type={type}
-        className="bg-transparent px-2 w-full outline-none flex-1"
-        name={name}
-        onChange={onChange}
-        id={name}
-        value={value}
-      />
+        <input
+          placeholder={placeholder}
+          type={type}
+          className="bg-transparent px-2 w-full outline-none flex-1"
+          name={name}
+          onChange={onChange}
+          id={name}
+          value={value}
+        />
+      </div>
     </div>
   ) : type == "radio" ? (
-    <div className="flex justify-start items-center gap-x-4 bg-white rounded-md shadow-sm drop-shadow-sm px-4 py-4 ">
-      <p className="text-tiny font-semibold">{placeholder}</p>
+    <div className="flex max-md:flex-col justify-start items-center gap-x-4 bg-white rounded-md shadow-sm drop-shadow-sm px-4 py-4 ">
+      <p className="text-tiny font-semibold max-md:py-2">{placeholder}</p>
 
       <div className={`${radiosViewType}`}>
         {radios.map((item, index) => {
           return (
-            <div key={index} className="flex gap-x-1">
+            <div
+              key={index}
+              className={`flex items-center justify-start gap-x-1 ${item.customStyle}`}
+            >
               <input
                 type="radio"
                 name={item.name}
@@ -96,7 +102,6 @@ const JobForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     setLoading(true);
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -108,18 +113,18 @@ const JobForm = () => {
         ...form,
         cv: reader.result,
       };
-      console.log(emailParams);
       emailjs.send(serviceId, templateId, emailParams, userId).then(
         (result) => {
           console.log(result.text);
           setLoading(false);
           alert("Thank You!");
+          setForm(defaultFormState);
           // window.location.reload(false);
         },
         (error) => {
           console.log(error.text);
           setLoading(false);
-          alert("Registration Failed!");
+          alert("Somthing went wrong, please try again!");
         }
       );
     };
@@ -216,7 +221,7 @@ const JobForm = () => {
       />
       <div />
       <CustomInput
-        radiosViewType={"flex justify-center items-center gap-x-4"}
+        radiosViewType={"grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2"}
         placeholder={"Field"}
         type="radio"
         onChange={handleChange}
@@ -229,20 +234,21 @@ const JobForm = () => {
           },
           {
             name: "field",
-            value: "secMarket",
-            checked: form.field == "secMarket",
-            placeholder: "Secondary Market",
-          },
-          {
-            name: "field",
             value: "rent",
             checked: form.field == "rent",
             placeholder: "Rent",
           },
+          {
+            name: "field",
+            value: "secMarket",
+            checked: form.field == "secMarket",
+            placeholder: "Secondary Market",
+            customStyle: "max-md:col-span-full",
+          },
         ]}
       />
       <CustomInput
-        radiosViewType={"flex justify-center items-center gap-x-4"}
+        radiosViewType={"grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2"}
         placeholder={"Gender"}
         type="radio"
         onChange={handleChange}
@@ -263,7 +269,9 @@ const JobForm = () => {
       />
       <div className="lg:col-span-2">
         <CustomInput
-          radiosViewType={"grid grid-cols-3 gap-x-6 gap-y-1"}
+          radiosViewType={
+            "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1"
+          }
           placeholder={"English Level"}
           type="radio"
           onChange={handleChange}
@@ -309,7 +317,9 @@ const JobForm = () => {
       </div>
       <div className="lg:col-span-2">
         <CustomInput
-          radiosViewType={"grid grid-cols-3 gap-x-6 gap-y-1"}
+          radiosViewType={
+            "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1"
+          }
           placeholder={"Arabic Level"}
           type="radio"
           onChange={handleChange}
@@ -368,7 +378,7 @@ const JobForm = () => {
         value={form.closing_deal}
         onChange={handleChange}
       />
-      <div className="col-span-full flex justify-between items-center">
+      <div className="col-span-full flex max-sm:flex-col justify-between items-center">
         <div className="md:flex items-center md:gap-4">
           <Button
             textColor={"text-white font-medium"}

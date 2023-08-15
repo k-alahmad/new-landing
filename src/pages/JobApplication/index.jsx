@@ -7,7 +7,7 @@ const JobApplication = () => {
   return (
     <div className="flex flex-col items-center">
       <Header />
-      <div className="flex flex-col items-center xl:w-[1270px] my-12 ">
+      <div className="flex flex-col items-center w-full xl:w-[1270px] my-12 max-xl:px-4">
         <JobInfo />
         <JobForm />
       </div>
