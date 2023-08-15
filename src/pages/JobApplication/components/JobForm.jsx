@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Button from "../../../components/UI/Button";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 const CustomInput = ({
@@ -45,7 +46,9 @@ const CustomInput = ({
                   accentColor: "#AA8A3A",
                 }}
               />
-              <label htmlFor="regular">{item.placeholder}</label>
+              <label htmlFor="regular" onClick={onChange}>
+                {item.placeholder}
+              </label>
             </div>
           );
         })}
@@ -72,6 +75,8 @@ let defaultFormState = {
 };
 const JobForm = () => {
   const [form, setForm] = useState(defaultFormState);
+  const [file, setFile] = useState();
+
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -79,13 +84,22 @@ const JobForm = () => {
         e.target.type === "checkbox" ? e.target.checked : e.target.value,
     });
   };
+  function onFileChange(e) {
+    if (!e.target.files || e.target.files.length === 0) {
+      setFile(undefined);
+    }
+    setFile(e.target.files[0]);
+    setForm({ ...form, cv: e.target.files[0] });
+  }
+  const hiddenFileInput = React.useRef(null);
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
         "service_5wdnu6j",
-        "template_slqqcpm",
-        form.current,
+        "template_tl2vjv3",
+        formRef.current,
         "sxh5TJan60LQqD6Sw"
       )
       .then(
@@ -100,7 +114,7 @@ const JobForm = () => {
       );
   };
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     sendEmail(e);
     // let formData = new FormData(form.current);
     // try {
@@ -130,9 +144,10 @@ const JobForm = () => {
     // }
     alert("Thank You !!!");
   };
+  const formRef = React.useRef();
   return (
     <form
-      // ref={form}
+      ref={formRef}
       onSubmit={handleSubmit}
       className="mt-8 p-8 w-full lg:grid grid-cols-2 gap-x-5 space-y-8 bg-third rounded-md "
     >
@@ -153,25 +168,27 @@ const JobForm = () => {
         value={form.email}
         onChange={handleChange}
       />
-      <PhoneInput
-        country={"ae"}
-        placeholder={"Phone Number"}
-        enableSearch={true}
-        value={form.phone_No}
-        inputProps={{
-          name: "phone_No",
-          id: "phone_No",
-          required: true,
-        }}
-        onChange={(e) => setForm({ ...form, phone_No: e })}
-        containerClass="bg-white !rounded-md shadow-sm drop-shadow-sm  px-1 flex "
-        inputClass={`!bg-transparent !text-black !w-full !text-lg !h-full !border-none px-0 !outline-none`}
-        buttonClass={`!border-none !text-lg `}
-        buttonStyle={{ direction: "ltr" }}
-        inputStyle={{
-          direction: "ltr",
-        }}
-      />
+      <div>
+        <PhoneInput
+          country={"ae"}
+          placeholder={"Phone Number"}
+          enableSearch={true}
+          // value={form.phone_No}
+          inputProps={{
+            name: "phone_No",
+            id: "phone_No",
+            required: true,
+          }}
+          onChange={(e) => setForm({ ...form, phone_No: e })}
+          containerClass="bg-white !rounded-md shadow-sm drop-shadow-sm  px-1 flex"
+          inputClass={`!bg-transparent !text-black !w-full !text-lg !h-full !border-none px-0 !outline-none`}
+          buttonClass={`!border-none !text-lg `}
+          buttonStyle={{ direction: "ltr" }}
+          inputStyle={{
+            direction: "ltr",
+          }}
+        />
+      </div>
       <CustomInput
         placeholder={"Years Of Experience"}
         type="number"
@@ -340,6 +357,47 @@ const JobForm = () => {
         value={form.closing_deal}
         onChange={handleChange}
       />
+      <div className="col-span-full flex justify-between items-center">
+        <div className="md:flex items-center md:gap-4">
+          <Button
+            textColor={"text-white font-medium"}
+            text={"Upload CV"}
+            bgColor={"bg-primary"}
+            customStyle={"py-2 px-4"}
+            onClick={(e) => {
+              e.preventDefault();
+              hiddenFileInput.current.click();
+            }}
+          />
+          <input
+            type="file"
+            // accept="images/*"
+            onChange={onFileChange}
+            style={{ display: "none" }}
+            ref={hiddenFileInput}
+          />
+          <p>{form.cv?.name} </p>
+        </div>
+        <button
+          className="text-white font-medium bg-secondary py-2 px-4 rounded-[27px] text-center text-smaller disabled:bg-gray-500"
+          type="submit"
+          disabled={
+            form.full_name == "" ||
+            form.email == "" ||
+            form.phone_No == "" ||
+            form.years_experience == "" ||
+            form.area == "" ||
+            form.field == "" ||
+            form.gender == "" ||
+            form.lvl_arabic == "" ||
+            form.lvl_english == "" ||
+            form.closing_deal == "" ||
+            form.cv == ""
+          }
+        >
+          Send
+        </button>
+      </div>
     </form>
   );
 };
