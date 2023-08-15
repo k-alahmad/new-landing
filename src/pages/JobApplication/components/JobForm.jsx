@@ -95,23 +95,30 @@ const JobForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_5wdnu6j",
-        "template_tl2vjv3",
-        formRef.current,
-        "sxh5TJan60LQqD6Sw"
-      )
-      .then(
+
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = async (e) => {
+      const serviceId = "service_5wdnu6j";
+      const templateId = "template_tl2vjv3";
+      const userId = "sxh5TJan60LQqD6Sw";
+      const emailParams = {
+        ...form,
+        cv: reader.result,
+      };
+      console.log(emailParams);
+      emailjs.send(serviceId, templateId, emailParams, userId).then(
         (result) => {
           console.log(result.text);
-          window.location.reload(false);
+          alert("Thank You!");
+          // window.location.reload(false);
         },
         (error) => {
           console.log(error.text);
           alert("Registration Failed!");
         }
       );
+    };
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -142,7 +149,7 @@ const JobForm = () => {
     // } catch (error) {
     //   console.error("Error here:", error);
     // }
-    alert("Thank You !!!");
+    // alert("Thank You !!!");
   };
   const formRef = React.useRef();
   return (
