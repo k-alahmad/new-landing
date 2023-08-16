@@ -4,12 +4,7 @@ import aboutIcon from "../../assets/icons/about.svg";
 import Logo from "../../assets/logos/black-logo.svg";
 import { data } from "../../data/aboutUsData";
 import Header from "./components/Header";
-import TiktokPixel from "tiktok-pixel";
 
-const options = {
-	debug: true, // enable logs
-};
-TiktokPixel.init("CJE7143C77U2JVNFTR80", options);
 const AboutUs = () => {
 	const MissionCard = ({ title, text, icon }) => {
 		return (
