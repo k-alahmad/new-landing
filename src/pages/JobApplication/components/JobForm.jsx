@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import Button from "../../../components/UI/Button";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
+import TiktokPixel from "tiktok-pixel";
 const CustomInput = ({
 	icon,
 	placeholder,
@@ -160,7 +161,16 @@ const JobForm = () => {
 		// }
 		// alert("Thank You !!!");
 	};
+	const options = {
+		debug: true, // enable logs
+	};
+	TiktokPixel.init("CJE7143C77U2JVNFTR80", options);
 	const formRef = React.useRef();
+	TiktokPixel.track("SubmitForm", {
+		content_name: "submit",
+		content_category: "job",
+		status: "submitted",
+	});
 	return (
 		<form
 			ref={formRef}
