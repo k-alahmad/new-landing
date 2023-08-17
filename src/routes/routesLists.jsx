@@ -13,6 +13,10 @@ export const publicRoutes = [
     path: "/privacy-policy",
     element: lazy(() => import("../pages/privacy/index.jsx")),
   },
+  {
+    path: "*",
+    element: lazy(() => import("../components/UI/404NotFound/index.jsx")),
+  },
 ];
 
 export const protectedRoutes = [];
