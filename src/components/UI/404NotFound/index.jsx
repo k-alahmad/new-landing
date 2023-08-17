@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
-import GradientText from "../GradientText";
 const NotFound404 = () => {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
