@@ -27,7 +27,7 @@ const Header = () => {
     );
   };
   return (
-    <div className="md:grid md:grid-cols-12 gap-0  xl:h-[600px] 2xl:h-[700px] relative">
+    <div className="md:grid md:grid-cols-12 gap-0 xl:h-[600px] 2xl:h-[700px] relative">
       <div className="col-span-7 bg-headerBg text-white bg-[#161535] bg-center bg-no-repeat bg-cover max-md:pt-24">
         <Slider
           ref={sliderRef1}
@@ -120,7 +120,7 @@ const Header = () => {
                 <img
                   src={item.image}
                   key={index}
-                  className="w-full h-[450px] md:h-[470px] lg:h-[530px] xl:h-[600px] 2xl:h-[700px]"
+                  className="w-full h-[450px] md:h-[470px] lg:h-[530px] xl:h-[600px] 2xl:h-[700px] object-cover"
                   alt=""
                 />
               );
