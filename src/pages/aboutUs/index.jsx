@@ -1,11 +1,13 @@
-import React from "react";
-import GradientText from "../../components/UI/GradientText";
+import React, { useEffect } from "react";
 import aboutIcon from "../../assets/icons/about.svg";
 import Logo from "../../assets/logos/black-logo.svg";
 import { data } from "../../data/aboutUsData";
 import Header from "./components/Header";
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const MissionCard = ({ title, text, icon }) => {
     return (
       <div className="w-[90%] space-y-4">

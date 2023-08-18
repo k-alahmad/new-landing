@@ -10,7 +10,7 @@ import { MdDehaze } from "react-icons/md";
 import { handleScroll } from "../../../helpers/scroll";
 import { NavElement } from "../../../data/navData";
 import Logo from "../../../assets/logos/AVA-Logo.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 const NavBarT2 = () => {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,6 +18,7 @@ const NavBarT2 = () => {
   const [selectedLink, setSelectedLink] = useState("home");
   // const dispatch = useDispatch();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const listenScrollEvent = (event) => {
     if (document.documentElement.scrollTop < 40) {
@@ -54,7 +55,12 @@ const NavBarT2 = () => {
                 : "#161535",
           }}
         >
-          <img src={Logo} className="h-12 2xl:h-16" alt="" />
+          <img
+            src={Logo}
+            className="h-12 2xl:h-16"
+            alt=""
+            onClick={() => navigate("/")}
+          />
           {NavElement.map((e) => (
             <LinkElement
               key={e.link}

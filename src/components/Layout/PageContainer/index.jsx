@@ -13,7 +13,6 @@ const PageLayout = ({ children }) => {
     }
     setW(width);
   }, [width]);
-
   return (
     <div className=" flex flex-col justify-center items-center relative">
       <NavBar />
