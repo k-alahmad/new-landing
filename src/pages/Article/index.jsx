@@ -18,46 +18,59 @@ const ArticlePage = () => {
         />
         <div className="absolute h-full w-full bg-secondary/50 top-0 left-0" />
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-30 text-white">
-          <p className="font-semibold text-big text-center w-[70%] 2xl:w-[50%] drop-shadow-2xl">
+          <p className="font-semibold text-med md:text-big text-center w-[70%] 2xl:w-[50%] drop-shadow-2xl">
             {article?.title}
           </p>
+        </div>
+      </div>
+      <div className="max-w-[1280px]">
+        <div className="p-4 md:p-8 space-y-12">
           <div className="flex items-center gap-x-4">
             <img
               src={article?.author?.image}
-              className="h-[50px] w-[50px] rounded-md object-cover object-top"
+              className="h-[150px] w-[100px] lg:h-[100px] lg:w-[100px] rounded-md object-cover object-top"
               alt=""
             />
             <div>
-              <p className="text-small font-medium text-third">
+              <p className="font-semibold text-smaller md:text-med">
+                {article?.title}
+              </p>
+              <p className="text-tiny md:text-smaller font-medium">
                 {article?.author?.name}
               </p>
               <div className="flex items-center gap-x-4">
-                <p className="text-tiny font-medium text-third">
+                <p className="text-tiny md:text-smaller font-medium">
                   {article?.minRead} Min Read
                 </p>
-                <p className="text-tiny font-medium text-third">
-                  {article?.createDate}
-                </p>
+                <p className="text-tiny font-medium">{article?.createDate}</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="max-w-[1280px] mx-2">
-        <div className="p-8 space-y-12">
           {article?.sections.map((item, index) => {
             return (
-              <div className="col-span-8 space-y-4">
-                <p className="font-bold text-small"> {item.heading}</p>
+              <div
+                key={index}
+                className="col-span-8 flex flex-col justify-center items-center"
+              >
+                <p className="font-bold text-small self-start">
+                  {item.heading}
+                </p>
                 <div className="space-y-6">
                   {item?.text.map((item, index) => {
-                    return <p className="font-nornal text-smaller">{item}</p>;
+                    return (
+                      <p
+                        key={index}
+                        className="font-nornal text-smaller text-justify"
+                      >
+                        {item}
+                      </p>
+                    );
                   })}
                 </div>
                 {item?.images?.length > 0 && (
                   <img
                     src={item.images[0]}
-                    className="col-span-4 w-full h-full rounded-md"
+                    className="col-span-4 lg:w-[60%] self-center h-[400px] rounded-md pt-12"
                     alt=""
                   />
                 )}
