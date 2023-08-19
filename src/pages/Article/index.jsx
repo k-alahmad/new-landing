@@ -9,7 +9,7 @@ const ArticlePage = () => {
     setArticle(tempData);
   }, [slug]);
   return (
-    <div className="mt-24">
+    <div className="">
       <div className="h-[500px] relative">
         <img
           src={article?.mainImage}

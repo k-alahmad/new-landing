@@ -12,6 +12,7 @@ const ArticleList = () => {
             className="h-[400px] w-[300px] rounded-sm relative overflow-hidden group"
             onClick={() => {
               navigate(`/articles/${item.slug}`);
+              localStorage.setItem("slug", item.slug);
             }}
           >
             <img

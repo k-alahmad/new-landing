@@ -34,6 +34,7 @@ const NavBarT2 = () => {
       document.removeEventListener("scroll", listenScrollEvent);
     };
   }, []);
+  let slug = localStorage.getItem("slug");
   return (
     <>
       <div className={`flex flex-col justify-center items-center`}>
@@ -51,7 +52,8 @@ const NavBarT2 = () => {
                 : location.pathname == "/" ||
                   location.pathname == "/about-us" ||
                   location.pathname == "/jobs" ||
-                  location.pathname == "/articles"
+                  location.pathname == "/articles" ||
+                  location.pathname == `/articles/${slug}`
                 ? "transparent"
                 : "#161535",
           }}
