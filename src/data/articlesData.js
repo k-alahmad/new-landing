@@ -4,6 +4,7 @@ export const data = {
   headerTitle: "Read Our Latest Artilces and News",
   articles: [
     {
+      createDate: "18/08/2023",
       slug: "Eergrande_Bankruptcy",
       mainImage: testImage,
       title:

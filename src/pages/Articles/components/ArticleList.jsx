@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 const ArticleList = () => {
   const navigate = useNavigate();
   return (
-    <div className="md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 place-items-center my-20">
+    // <div className="md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 place-items-center my-20">
+    <div className="md:grid gap-7 place-items-center my-20">
       {data.articles.map((item, index) => {
         return (
           <div
             key={index}
-            className="h-[400px] w-[300px] rounded-sm relative overflow-hidden group"
+            // className="h-[400px] w-[300px] rounded-sm relative overflow-hidden group"
+            className="h-[400px] w-[50%] rounded-sm relative overflow-hidden group"
             onClick={() => {
               navigate(`/articles/${item.slug}`);
               localStorage.setItem("slug", item.slug);
@@ -20,7 +22,7 @@ const ArticleList = () => {
               alt=""
               className="w-full h-full rounded-sm"
             />
-            <div className="max-h- bg-secondary/20 w-full absolute -bottom-[116px] group-hover:bottom-0 left-0 transition-all duration-300 backdrop-blur-[20px] p-3 space-y-2">
+            <div className="max-h- bg-secondary/20 w-full absolute -bottom-[116px] group-hover:bottom-0 left-0 transition-all duration-500 backdrop-blur-[20px] p-3 space-y-2">
               <p className="font-semibold text-smaller drop-shadow-xl text-third">
                 {item.title}
               </p>
