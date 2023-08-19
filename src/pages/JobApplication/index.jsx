@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import GradientText from "../../components/UI/GradientText";
-import JobForm from "./components/JobForm";
+import JobForm from "./components/Job/JobForm";
 import Header from "./components/Header";
-import JobInfo from "./components/JobInfo";
-const JobApplication = () => {
+import JobInfo from "./components/Job/JobInfo";
+const JobApplicationPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,4 +18,4 @@ const JobApplication = () => {
   );
 };
 
-export default JobApplication;
+export default JobApplicationPage;

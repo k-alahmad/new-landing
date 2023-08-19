@@ -4,7 +4,7 @@ import Logo from "../../assets/logos/black-logo.svg";
 import { data } from "../../data/aboutUsData";
 import Header from "./components/Header";
 
-const AboutUs = () => {
+const AboutUsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -162,4 +162,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUsPage;

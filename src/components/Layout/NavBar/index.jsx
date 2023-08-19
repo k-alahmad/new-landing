@@ -50,7 +50,8 @@ const NavBarT2 = () => {
                 ? "#161535"
                 : location.pathname == "/" ||
                   location.pathname == "/about-us" ||
-                  location.pathname == "/jobs"
+                  location.pathname == "/jobs" ||
+                  location.pathname == "/articles"
                 ? "transparent"
                 : "#161535",
           }}

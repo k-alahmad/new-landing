@@ -11,6 +11,14 @@ export const publicRoutes = [
     element: lazy(() => import("../pages/JobApplication/index.jsx")),
   },
   {
+    path: "/articles",
+    element: lazy(() => import("../pages/Articles/index.jsx")),
+  },
+  {
+    path: "/articles/:slug",
+    element: lazy(() => import("../pages/Article/index.jsx")),
+  },
+  {
     path: "/privacy-policy",
     element: lazy(() => import("../pages/privacy/index.jsx")),
   },

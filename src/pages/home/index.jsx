@@ -4,7 +4,7 @@ import ContactUs from "./components/ContactUs";
 import Properties from "./components/Properties";
 import About from "./components/About";
 
-const Home = () => {
+const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

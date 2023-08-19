@@ -1,6 +1,6 @@
 import React from "react";
-import { data } from "../../../data/aboutUsData";
-import GradientText from "../../../components/UI/GradientText";
+import { data } from "../../../../data/articlesData";
+import GradientText from "../../../../components/UI/GradientText";
 const Header = () => {
   return (
     <div>
@@ -10,6 +10,7 @@ const Header = () => {
           customStyle={
             "text-center text-big 2xl:text-bigger font-bold text-primary w-[90%] md:w-[50%]"
           }
+          header
         />
       </div>
     </div>

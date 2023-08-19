@@ -1,9 +1,9 @@
 import React from "react";
-import GradientText from "../../../components/UI/GradientText";
-import jobIcon from "../../../assets/icons/job-icon.svg";
-import locationIcon from "../../../assets/icons/location-icon.svg";
-import fulltimeIcon from "../../../assets/icons/fulltime-icon.svg";
-import medalIcon from "../../../assets/icons/yellowMedal.svg";
+import GradientText from "../../../../components/UI/GradientText";
+import jobIcon from "../../../../assets/icons/job-icon.svg";
+import locationIcon from "../../../../assets/icons/location-icon.svg";
+import fulltimeIcon from "../../../../assets/icons/fulltime-icon.svg";
+import medalIcon from "../../../../assets/icons/yellowMedal.svg";
 const JobInfo = () => {
   return (
     <div className="flex justify-start items-start gap-x-5 bg-third w-full rounded-md p-8 shadow-md">

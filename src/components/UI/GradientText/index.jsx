@@ -1,10 +1,12 @@
 import React from "react";
 
-const GradientText = ({ text, customStyle }) => {
+const GradientText = ({ text, customStyle, header }) => {
   return (
     <p
       style={{
-        background: " linear-gradient(316deg, #DDB26E 0%, #161535 100%)",
+        background: header
+          ? "linear-gradient(116deg, #DDB26E 0%, #161535 100%)"
+          : "linear-gradient(316deg, #DDB26E 0%, #161535 100%)",
         backgroundClip: "text",
         WebkitBackgroundClip: "text",
         color: "transparent",
