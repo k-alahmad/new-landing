@@ -127,7 +127,7 @@ const Header = () => {
           })}
         </Slider>
       </div>
-      <div className="space-y-9 max-md:grid max-md:grid-cols-3 max-md:place-items-center max-md:gap-x-4 absolute top-[60%] sm:top-[47%] right-[2%] md:top-[30%] md:right-[39%] lg:right-[39.6%] xl:right-[39.5%] 2xl:right-[40.3%]">
+      <div className="space-y-9 max-md:grid max-md:grid-cols-3 max-md:place-items-center max-md:gap-x-4 absolute top-[53%] sm:top-[47%] right-[2%] md:top-[30%] md:right-[39%] lg:right-[39.6%] xl:right-[39.5%] 2xl:right-[40.3%]">
         {data.map((item, index) => {
           if (index < 3)
             return (

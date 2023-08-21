@@ -52,6 +52,7 @@ const Properties = () => {
                       touchMove={true}
                       slidesToShow={2}
                       slidesToScroll={2}
+                      rows={2}
                       dots={true}
                       arrows={false}
                       infinite={false}
@@ -65,15 +66,17 @@ const Properties = () => {
                           },
                         },
                         {
-                          breakpoint: 1000,
+                          breakpoint: 1200,
                           settings: {
                             slidesToShow: 2,
+                            rows: 1,
                           },
                         },
                         {
                           breakpoint: 590,
                           settings: {
                             slidesToShow: 1,
+                            rows: 1,
                             centerMode: true,
                             centerPadding: "30px",
                           },
@@ -82,6 +85,7 @@ const Properties = () => {
                           breakpoint: 400,
                           settings: {
                             slidesToShow: 1,
+                            row: 1,
                             centerMode: true,
                             centerPadding: "20px",
                           },

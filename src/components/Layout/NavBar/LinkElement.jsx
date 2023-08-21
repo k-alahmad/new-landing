@@ -7,7 +7,7 @@ const LinkElement = ({ name, link, styled, onClick }) => {
         return {
           color: isActive ? "#B28A5D" : "white",
           borderRadius: 0,
-          borderBottomColor: isActive ? "#B28A5D" : "white",
+          borderBottomColor: isActive ? "#B28A5D" : "transparent",
           borderBottomWidth: 2,
           paddingBottom: 4,
         };

@@ -19,18 +19,22 @@ const ProjectDetails = ({
         </div>
         <br />
         <div className="flex gap-x-8 2xl:gap-x-16 px-2">
-          <div className="flex text-smaller items-center gap-x-3">
+          <div className="flex text-tiny sm:text-smaller items-center gap-x-2 sm:gap-x-3">
             <MdPayment className="text-med" />
             <div>
               <p className="font-semibold">{startingPrice}</p>
-              <p className="text-tiny font-extralight">Starting Price</p>
+              <p className="text-[14px] sm:text-tiny font-extralight">
+                Starting Price
+              </p>
             </div>
           </div>
-          <div className="flex text-smaller items-center gap-x-3">
+          <div className="flex text-tiny sm:text-smaller items-center gap-x-2 sm:gap-x-3">
             <MdLocationPin className="text-med" />
             <div>
               <p className="font-semibold">{location}</p>
-              <p className="text-tiny font-extralight">Location</p>
+              <p className="text-[14px] sm:text-tiny font-extralight">
+                Location
+              </p>
             </div>
           </div>
         </div>
