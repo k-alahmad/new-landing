@@ -1,6 +1,9 @@
 import kasra from "../assets/images/aboutus/kasra.webp";
 import maryam from "../assets/images/aboutus/maryam.webp";
 import dubai from "../assets/images/aboutus/dubai.webp";
+import about330 from "../assets/images/home/330.webp";
+import aboutAmber from "../assets/images/home/amber.webp";
+import aboutJLT from "../assets/images/home/jlt.webp";
 import dubaiImageIcon from "../assets/icons/about.svg";
 import teamWorkIcon from "../assets/icons/teamWork.svg";
 import projectsIcon from "../assets/icons/projects.svg";
@@ -45,9 +48,9 @@ export const data = {
     title: "Vision",
     description:
       "At AVA Real Estate, our vision is to be The Best Real Estate Company in the industry",
-    imageOne: dubai,
-    imageTwo: dubai,
-    imageThree: dubai,
+    imageOne: about330,
+    imageTwo: aboutAmber,
+    imageThree: aboutJLT,
     items: [
       {
         text: "Both in the minds of people and the communities. We expect and believe in delivering The Best we have to offer by always keeping our values at the top without compromising customer values.",
