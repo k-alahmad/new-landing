@@ -27,6 +27,7 @@ const HomePage = () => {
 					type='image/svg+xml'
 					href='./src/assets/logos/AVA-Logo.svg'
 				/>
+				<title>AVA REAL ESTATE</title>
 			</Helmet>
 			<Header />
 			<Properties />
