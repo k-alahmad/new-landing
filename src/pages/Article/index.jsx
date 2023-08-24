@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { data } from "../../data/articlesData";
+import { Helmet } from "react-helmet";
 const ArticlePage = () => {
 	const { slug } = useParams();
 	const [article, setArticle] = useState();
@@ -10,6 +11,18 @@ const ArticlePage = () => {
 	}, [slug]);
 	return (
 		<div className='flex flex-col justify-center items-center'>
+			<Helmet htmlAttributes>
+				<html lang='en' />
+				<meta charset='UTF-8' />
+				<title>{article?.pageTitle}</title>
+				<meta name='author' content={article?.author?.name}></meta>
+				<meta
+					name='title'
+					content={`Ava Real Estate - ${article?.pageTitle}`}
+				/>
+				<meta name='description' content={article?.title} />
+				<meta name='keywords' content={article?.keywords} />
+			</Helmet>
 			<div className='h-[500px] relative w-full '>
 				<img
 					src={article?.mainImage}
@@ -55,6 +68,13 @@ const ArticlePage = () => {
 								<p className='font-bold text-small self-start'>
 									{item.heading}
 								</p>
+								{item?.images?.length > 0 && (
+									<img
+										src={item.images[0]}
+										className='col-span-4 lg:w-[70%] self-center h-[500px] rounded-md pt-12 pb-12'
+										alt=''
+									/>
+								)}
 								<div className='space-y-6'>
 									{item?.text.map((item, index) => {
 										return (
@@ -67,13 +87,6 @@ const ArticlePage = () => {
 										);
 									})}
 								</div>
-								{item?.images?.length > 0 && (
-									<img
-										src={item.images[0]}
-										className='col-span-4 lg:w-[60%] self-center h-[400px] rounded-md pt-12'
-										alt=''
-									/>
-								)}
 							</div>
 						);
 					})}
