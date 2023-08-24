@@ -12,6 +12,7 @@ const HomePage = () => {
 		<div>
 			<Helmet htmlAttributes>
 				<html lang='en' />
+				<meta charset='UTF-8' />
 				<meta name='title' content='Ava Real Estate' />
 				<meta
 					name='description'
