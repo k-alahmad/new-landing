@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { data } from "../../data/articlesData";
 import { Helmet } from "react-helmet";
+import Head from "../../components/Layout/PageContainer/Head";
 const ArticlePage = () => {
 	const { slug } = useParams();
 	const [article, setArticle] = useState();
@@ -11,18 +12,28 @@ const ArticlePage = () => {
 	}, [slug]);
 	return (
 		<div className='flex flex-col justify-center items-center'>
-			<Helmet htmlAttributes>
+			{/* <Helmet htmlAttributes>
 				<html lang='en' />
 				<meta charset='UTF-8' />
 				<title>{article?.pageTitle}</title>
 				<meta name='author' content={article?.author?.name}></meta>
 				<meta
 					name='title'
-					content={`Ava Real Estate - ${article?.pageTitle}`}
+					content={`Ava Real Estate - ${article?.pageTitle} `}
 				/>
 				<meta name='description' content={article?.title} />
 				<meta name='keywords' content={article?.keywords} />
-			</Helmet>
+				data-rh="true"
+			</Helmet> */}
+			<Head
+				title={article?.pageTitle}
+				desc={article?.title}
+				additionMeta={
+					<meta name='author' content={article?.author?.name}></meta>
+				}
+				keywords={article?.keywords}
+				canonicalLink={article?.slug}
+			/>
 			<div className='h-[500px] relative w-full '>
 				<img
 					src={article?.mainImage}

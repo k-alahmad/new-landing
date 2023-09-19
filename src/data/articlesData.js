@@ -1,6 +1,9 @@
 import testImage from "../assets/images/aboutus/dubai.webp";
 import kasra from "../assets/images/aboutus/kasra.webp";
 import cover from "../assets/images/articles/1.webp";
+import jebelali from "../assets/images/articles/jebelali.webp";
+import versus from "../assets/images/articles/versus.webp";
+import jebelalipalm from "../assets/images/articles/jebelalipalm.webp";
 import buble from "../assets/images/articles/buble.webp";
 import intro from "../assets/images/articles/intro.webp";
 export const data = {
@@ -50,6 +53,57 @@ export const data = {
 					heading: "Conclusion:",
 					text: [
 						"Evergrande's bankruptcy has cast a spotlight on the vulnerabilities of the global economic landscape. China's real estate market, a significant contributor to its economy, is expected to experience turbulence with potential cascading effects. The aftermath of this crisis could lead to Chinese investors diversifying their holdings into international markets, particularly in locations like Dubai, which offer stability and growth potential. Dubai's real estate market, positioned to accommodate such investment inflows, stands to benefit from this trend. As the world watches the fallout of Evergrande's bankruptcy, the dynamics of global real estate investments could see a notable shift, with Dubai poised to emerge as a prominent beneficiary.",
+					],
+					images: [],
+				},
+			],
+		},
+		{
+			createDate: "19/09/2023",
+			slug: "Palm_Jebel_Ali",
+			pageTitle: "Palm Jebel Ali",
+			mainImage: jebelali,
+			title: "Palm Jebel Ali: Dubai's New Island of Opportunity",
+			minRead: "10",
+			author: { name: "Kasra Malakouti", image: kasra },
+			keywords:
+				"dubai real estate, buildings economy, Evergrande's bankruptcy, Chinese real estate giant,Chinese real estate, China's Economy, Evergrande Fallout, Economic growth, Impact on China's Economy, effect of Evergrande's bankruptcy on Dubai Real Estate Market, global economic, Dubai Economy, Kasra Malakouti, AVA Real Estate",
+			references: [
+				"https://docs.google.com/document/d/1g1TMgUgbdLzxdZKFCVwV_TUSUZPZmkziTa_aCMWDWVY/edit",
+				"https://www.figma.com/file/sMlPEBuOMgKEWujYchQAqT/AVA-realestate?node-id=282%3A1981&mode=dev",
+			],
+			sections: [
+				{
+					heading: "Introduction:",
+					text: [
+						"Dubai, a city synonymous with luxury, innovation, and grandeur, has once again captured the world's attention with its latest announcement: Palm Jebel Ali. This new island promises not just a new lifestyle but also presents unparalleled opportunities for investment. Whether you're considering relocating to a more scenic location or seeking a promising investment, Palm Jebel Ali beckons with its vast potential.",
+					],
+					images: [jebelali],
+				},
+				{
+					heading:
+						"But how does Palm Jebel Ali compare to its predecessor, Palm Jumeirah? Let's delve into the differences that set these two iconic islands apart.",
+					text: [
+						"1. Size Matters: Palm Jebel Ali is a testament to Dubai's ambition. Spanning an impressive area of 13.459 km, it is twice the size of Palm Jumeirah. This expansion is not just about land mass; it aims to add a staggering 110 km of coastline to Dubai, further enhancing the city's waterfront appeal.",
+						"2. Seamless Connectivity with Gateway Bridges:One of the standout features of Palm Jebel Ali is its three bridge gateways. This design not only ensures that residents and visitors avoid traffic congestion but also offers easier and more efficient access compared to Palm Jumeirah.",
+						"3. Investment and Development: Palm Jebel Ali is currently under development, meaning that the prices are at their most competitive. As the development progresses and projects are handed over, based on market trends and our extensive experience, investors can expect significant capital appreciation. Moreover, there's a unique opportunity for investors to purchase plots of land. This allows for customization, letting you build according to your tastes, complete with unique amenities, facilities, and designs. Such bespoke properties are likely to yield even higher capital appreciation.",
+					],
+					images: [versus],
+				},
+				{
+					heading: "Top-Ranked Facts About Palm Jebel Ali:",
+					text: [
+						"Eco-Friendly: 30% of the public facilities on the island will be powered by renewable energy, showcasing Dubai's commitment to sustainability.",
+						"Luxury Accommodations: The island will feature 80 hotels and resorts, ensuring that visitors and residents experi-ence unparalleled luxury.",
+						"Archipelago Design: The master plan includes seven interconnected islands, making it a unique and expansive project.",
+						"Housing Capacity: Palm Jebel Ali is designed to accommodate up to 35,000 families, making it a vibrant community for residents.",
+					],
+					images: [jebelalipalm],
+				},
+				{
+					heading: "Conclusion:",
+					text: [
+						"In conclusion, Palm Jebel Ali is not just another development in Dubai; it's a statement of intent, a vision of the future, and an opportunity that's hard to ignore. Whether you're an investor, a future resident, or just an admirer of grand architecture and design, Palm Jebel Ali promises to be a marvel worth watching.",
 					],
 					images: [],
 				},
