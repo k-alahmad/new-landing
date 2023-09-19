@@ -12,7 +12,7 @@ const ContactUs = () => {
         className="rounded-md relative lg:grid lg:grid-cols-12"
       >
         <div className="text-white bg-contactLinesBg bg-cover bg-right-top flex flex-col p-14 col-span-5">
-          <p className="font-medium text-big ">
+          <p className="font-medium text-med md:text-big ">
             Contact us, let us help you choose the right apartment for you
           </p>
           <div className="w-full lg:w-[90%] place-self-start mt-12">
