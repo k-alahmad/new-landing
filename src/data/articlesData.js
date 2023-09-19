@@ -21,8 +21,7 @@ export const data = {
 			keywords:
 				"dubai real estate, buildings economy, Evergrande's bankruptcy, Chinese real estate giant,Chinese real estate, China's Economy, Evergrande Fallout, Economic growth, Impact on China's Economy, effect of Evergrande's bankruptcy on Dubai Real Estate Market, global economic, Dubai Economy, Kasra Malakouti, AVA Real Estate",
 			references: [
-				"https://docs.google.com/document/d/1g1TMgUgbdLzxdZKFCVwV_TUSUZPZmkziTa_aCMWDWVY/edit",
-				"https://www.figma.com/file/sMlPEBuOMgKEWujYchQAqT/AVA-realestate?node-id=282%3A1981&mode=dev",
+				"https://edition.cnn.com/2023/08/18/investing/china-evergrande-bankruptcy-explained/",
 			],
 			sections: [
 				{
@@ -69,8 +68,9 @@ export const data = {
 			keywords:
 				"dubai real estate, buildings economy, Evergrande's bankruptcy, Chinese real estate giant,Chinese real estate, China's Economy, Evergrande Fallout, Economic growth, Impact on China's Economy, effect of Evergrande's bankruptcy on Dubai Real Estate Market, global economic, Dubai Economy, Kasra Malakouti, AVA Real Estate",
 			references: [
-				"https://docs.google.com/document/d/1g1TMgUgbdLzxdZKFCVwV_TUSUZPZmkziTa_aCMWDWVY/edit",
-				"https://www.figma.com/file/sMlPEBuOMgKEWujYchQAqT/AVA-realestate?node-id=282%3A1981&mode=dev",
+				"http://jebelalipalms.com/",
+				"https://www.avapalmjebelali.com/",
+				"https://www.avapalmjebelali.ae",
 			],
 			sections: [
 				{

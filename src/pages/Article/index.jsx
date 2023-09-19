@@ -47,6 +47,7 @@ const ArticlePage = () => {
 					</p>
 				</div>
 			</div>
+
 			<div className='max-w-[1280px]'>
 				<div className='p-4 md:p-8 space-y-12'>
 					<div className='flex items-center gap-x-4'>
@@ -101,6 +102,22 @@ const ArticlePage = () => {
 							</div>
 						);
 					})}
+					<div className='space-y-4'>
+						<p className='font-bold text-small self-start'>References</p>
+						{article?.references?.map((item) => {
+							return (
+								<div>
+									<a
+										className='text-small self-start underline text-blue-600'
+										href={item}
+										target='_blank'
+									>
+										{item}
+									</a>
+								</div>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>
