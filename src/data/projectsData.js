@@ -1,4 +1,6 @@
 import projectOneHeader from "../assets/images/ghaf-header.webp";
+import locationIcon from "../assets/icons/location-icon.svg";
+import coinIcon from "../assets/icons/coin.svg";
 export const projectsData = [
   {
     id: 1,
@@ -12,19 +14,14 @@ export const projectsData = [
     },
     InfoData: [
       {
-        Icon: "",
+        Icon: coinIcon,
         Title: { en: "AED24.6M", ar: "" },
         SubTitle: { en: "startingPrice", ar: "" },
       },
       {
-        Icon: "",
+        Icon: locationIcon,
         Title: { en: "Hessa Street", ar: "" },
         SubTitle: { en: "Location", ar: "" },
-      },
-      {
-        Icon: "",
-        Title: { en: "Handover", ar: "" },
-        SubTitle: { en: "Payment Plan", ar: "" },
       },
     ],
     Nearby: [
