@@ -28,24 +28,32 @@ export const projectsData = [
       {
         Duration: "Next To",
         Place: { en: "Butterfly Garnden", ar: "" },
-        Image: "",
+        Image: projectOneHeader,
       },
-      { Duration: "15 Min", Place: { en: "Dubai Marina", ar: "" }, Image: "" },
+      {
+        Duration: "15 Min",
+        Place: { en: "Dubai Marina", ar: "" },
+        Image: projectOneHeader,
+      },
       {
         Duration: "10 Min",
         Place: { en: "Dubai Hills Mall", ar: "" },
-        Image: "",
+        Image: projectOneHeader,
       },
-      { Duration: "29 Min", Place: { en: "DXB Airport", ar: "" }, Image: "" },
+      {
+        Duration: "29 Min",
+        Place: { en: "DXB Airport", ar: "" },
+        Image: projectOneHeader,
+      },
       {
         Duration: "20 Min",
         Place: { en: "Dubai Downtown", ar: "" },
-        Image: "",
+        Image: projectOneHeader,
       },
       {
         Duration: "15    Min",
         Place: { en: "Mall of Emirates", ar: "" },
-        Image: "",
+        Image: projectOneHeader,
       },
     ],
     Video: "",
