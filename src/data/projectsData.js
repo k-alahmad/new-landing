@@ -59,18 +59,28 @@ export const projectsData = [
 	},
 	{
 		id: 2,
-		ProjectName: { en: "Acres", ar: "" },
+		ProjectName: { en: "Acres", ar: "Acres" },
 		HeaderTitle: {
 			en: "The Acres, every step inside brings you closer to the outdoors.",
 			ar: "نص عربي للمشروع الثاني أي شي",
 		},
 		HeaderImage: projectTwoHeader,
-		InfoTitle: { en: "", ar: "" },
-		InfoSubTitle: { en: "", ar: "" },
+		InfoTitle: { en: "Acres Project Main Title", ar: "عنوان المشروع الثاني" },
+		InfoSubTitle: {
+			en: "Acres Project Description",
+			ar: "شرح مبسط عن المشروع الثاني ",
+		},
 		InfoData: [
-			{ Icon: "", Title: { en: "", ar: "" }, SubTitle: { en: "", ar: "" } },
-			{ Icon: "", Title: { en: "", ar: "" }, SubTitle: { en: "", ar: "" } },
-			{ Icon: "", Title: { en: "", ar: "" }, SubTitle: { en: "", ar: "" } },
+			{
+				Icon: coinIcon,
+				Title: { en: "AED24.6M", ar: "AED24.6M" },
+				SubTitle: { en: "Starting Price", ar: "بأسعار تبدأ من" },
+			},
+			{
+				Icon: locationIcon,
+				Title: { en: "Hessa Street", ar: "شارع حصة" },
+				SubTitle: { en: "Location", ar: "الموقع" },
+			},
 		],
 		Nearby: [
 			{
