@@ -1,6 +1,7 @@
 import projectOneHeader from "../assets/images/ghaf-header.webp";
 import locationIcon from "../assets/icons/location-icon.svg";
 import coinIcon from "../assets/icons/coin.svg";
+import DubaiVideo from "../assets/videos/dubai.mp4";
 export const projectsData = [
   {
     id: 1,
@@ -56,7 +57,7 @@ export const projectsData = [
         Image: projectOneHeader,
       },
     ],
-    Video: "",
+    Video: DubaiVideo,
   },
   {
     id: 2,
@@ -78,6 +79,6 @@ export const projectsData = [
       { Duration: "", Place: { en: "", ar: "" }, Image: "" },
       { Duration: "", Place: { en: "", ar: "" }, Image: "" },
     ],
-    Video: "",
+    Video: DubaiVideo,
   },
 ];
