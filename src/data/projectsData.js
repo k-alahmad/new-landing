@@ -56,7 +56,7 @@ export const projectsData = [
         Image: "",
       },
     ],
-    Video: "",
+    Video: DubaiVideo,
   },
   {
     id: 2,
@@ -107,6 +107,6 @@ export const projectsData = [
         Image: "",
       },
     ],
-    Video: "",
+    Video: DubaiVideo,
   },
 ];
