@@ -18,8 +18,10 @@ const HomePage = () => {
       />
       <Info selectedProject={selectedProject} />
       <Nearby selectedProject={selectedProject} />
-      <Video selectedProject={selectedProject} />
-      <RegisterForm selectedProject={selectedProject} />
+      <div className="bg-primary mt-6 flex flex-col justify-center items-center">
+        <Video selectedProject={selectedProject} />
+        <RegisterForm selectedProject={selectedProject} />
+      </div>
     </div>
   );
 };
