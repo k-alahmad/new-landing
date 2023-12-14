@@ -17,7 +17,7 @@ const Header = ({ selectedProject, setSelectedProject }) => {
           <p className="absolute left-0 w-full top-1 p-1 text-[40px] sm:text-big lg:text-bigger text-white text-center font-semibold">
             {projectsData[selectedProject].HeaderTitle[i18n.language]}
           </p>
-          <div className="absolute w-full bottom-0 rounded-lg left-0 bg-primary flex justify-center items-center p-1 text-small font-semibold">
+          <div className="absolute w-full bottom-0 rounded-lg left-0 bg-primary flex justify-center items-center p-1 text-smaller sm:text-small font-semibold">
             {projectsData.map((item, index) => {
               return (
                 <div
