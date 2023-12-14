@@ -69,9 +69,7 @@ const NavBar = () => {
         <div
           className={`transition-all duration-500 w-full px-2 xl:px-12 py-1 max-w-[1920px] flex justify-between items-center relative`}
         >
-          <div
-            className={`flex justify-between items-center gap-x-5 animate-pulse`}
-          >
+          <div className={`flex justify-between items-center gap-x-5 `}>
             <div
               onClick={() => setMobileOpen(true)}
               className="cursor-pointer text-white flex justify-center items-center gap-x-2"
@@ -79,7 +77,7 @@ const NavBar = () => {
               <MdDehaze size={30} />
               <p className="text-white">{t("menu")}</p>
             </div>
-            <div className="p-1 bg-white text-primary rounded-md shadow-md">
+            <div className="p-1 bg-white text-primary rounded-md shadow-md animate-pulse">
               <p
                 className="font-bold text-smaller cursor-pointer"
                 onClick={() => handleScroll("register")}

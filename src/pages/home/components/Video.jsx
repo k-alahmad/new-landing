@@ -2,7 +2,7 @@ import React from "react";
 import { projectsData } from "../../../data/projectsData";
 const Video = ({ selectedProject }) => {
   return (
-    <div className="w-[80vw] h-[400px] md:h-[650px] mt-12">
+    <div className="w-[80vw] h-[300px] sm:h-[400px]  md:h-[650px] mt-12">
       <video
         autoPlay
         loop
@@ -12,14 +12,6 @@ const Video = ({ selectedProject }) => {
         src={projectsData[selectedProject].Video}
         playsInline
       />
-      {/* <video
-        autoPlay
-        loop
-        muted
-        id="video"
-        className="absolute w-full h-full object-fill object-center lg:hidden"
-        playsInline
-      /> */}
     </div>
   );
 };

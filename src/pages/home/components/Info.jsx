@@ -6,7 +6,7 @@ const Info = ({ selectedProject }) => {
   return (
     <div className="flex flex-col justify-center items-center mt-6">
       <div className="w-[80vw]">
-        <p className="font-semibold text-big">
+        <p className="font-semibold text-med sm:text-big">
           {projectsData[selectedProject].InfoTitle[i18n.language]}
         </p>
         <p className="text-smaller">
