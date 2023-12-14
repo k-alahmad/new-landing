@@ -9,15 +9,13 @@ import "./locales/index.js";
 import Loader from "./components/UI/Loader/index.jsx";
 import { HelmetProvider } from "react-helmet-async";
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<HelmetProvider>
-		<React.StrictMode>
-			<Provider store={store}>
-				<Router>
-					<Suspense fallback={<Loader />}>
-						<App />
-					</Suspense>
-				</Router>
-			</Provider>
-		</React.StrictMode>
-	</HelmetProvider>,
+  <HelmetProvider>
+    <Provider store={store}>
+      <Router>
+        <Suspense fallback={<Loader />}>
+          <App />
+        </Suspense>
+      </Router>
+    </Provider>
+  </HelmetProvider>
 );

@@ -7,7 +7,6 @@ import {
   selectState,
 } from "../../../redux/modal.slice";
 import { useTranslation } from "react-i18next";
-
 export default function Modal() {
   const ref = useRef(null);
   const dispatch = useDispatch();
@@ -30,30 +29,29 @@ export default function Modal() {
       <div
         className={`${
           open ? "scale-100" : "scale-0"
-        } transition-all duration-500 justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none w-full`}
+        } transition-all duration-500 justify-center items-center flex fixed inset-0 z-40 outline-none focus:outline-none w-full`}
       >
         <div
           ref={ref}
-          className="rounded-lg shadow-lg relative flex flex-col outline-none focus:outline-none overflow-x-hidden overflow-y-scroll max-h-screen max-w-[95%] xl:max-w-[60%]"
+          className="rounded-xl shadow-xl relative flex flex-col z-50 outline-none focus:outline-none overflow-hidden bg-fifth/40 backdrop-blur-[21px] border-[1px] border-white/40 h-full max-h-[90vh] w-full max-w-[90vw] md:max-w-[70vw]"
         >
           <div
             onClick={() => {
               dispatch(hideModal());
             }}
-            className={`cursor-pointer font-bold self-center text-black hover:scale-125 hover:rotate-180 absolute ${
+            className={`cursor-pointer font-bold self-center text-secondary hover:scale-125 hover:rotate-180 absolute ${
               i18n.language == "en" ? "right-5" : "left-5"
-            }  top-2 sm:max-md:top-8 md:top-3 transition-all duration-300 z-30`}
+            }  top-2 sm:max-md:top-8 md:top-3 transition-all duration-500 z-30`}
           >
-            <MdClose className="text-bigger sm:text-huge" />
+            <MdClose size={35} />
           </div>
-          {/* <Register modal={true} /> */}
           {data?.data}
         </div>
       </div>
       <div
         className={`${
           open ? "scale-100" : "scale-0"
-        } opacity-20 fixed h-screen inset-0 z-40 bg-black`}
+        } opacity-20 fixed h-screen inset-0 z-0 bg-black`}
       ></div>
     </>
   );

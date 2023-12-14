@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
 import {
   MdLanguage,
   MdRadioButtonChecked,
@@ -13,7 +12,6 @@ export default function Dropdown() {
     i18n.changeLanguage(lng);
     localStorage.setItem("lng", lng);
   };
-
   const ref = useRef(null);
 
   const handleClickOutside = (event) => {
@@ -33,10 +31,10 @@ export default function Dropdown() {
       <div className="relative">
         <div
           style={{ WebkitTapHighlightColor: "transparent" }}
-          className="text-purple p-0 m-0 px-8 cursor-pointer"
+          className="text-purple p-0 m-0 cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <MdLanguage size={24} />
+          <MdLanguage size={30} className="text-white" />
         </div>
 
         <div
@@ -44,10 +42,10 @@ export default function Dropdown() {
           onClick={() => setOpen(false)}
           className={`${
             open ? "scale-100" : "scale-0"
-          } absolute z-10 mt-4 origin-top bg-purple rounded-lg shadow-2xl transition-all duration-300 p-4 space-y-2 text-white font-MED text-smaller w-40`}
+          } absolute z-10 top-10 -left-32 origin-top bg-primary/20 rounded-lg shadow-2xl drop-shadow-2xl backdrop-blur-[50px] transition-all duration-300 p-4 space-y-2 text-white text-smaller w-40`}
         >
           <div
-            className="flex justify-start items-center"
+            className="flex justify-start items-center cursor-pointer"
             onClick={() => {
               changeLanguage("en");
             }}
@@ -61,9 +59,8 @@ export default function Dropdown() {
             </div>
             <p>{t("English")}</p>
           </div>
-
           <div
-            className="flex justify-start items-center"
+            className="flex justify-start items-center cursor-pointer"
             onClick={() => {
               changeLanguage("ar");
             }}

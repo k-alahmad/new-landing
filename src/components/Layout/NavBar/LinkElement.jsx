@@ -1,21 +1,25 @@
 import { NavLink } from "react-router-dom";
-const LinkElement = ({ name, link, styled, onClick }) => {
+import colors from "../../../settings";
+const LinkElement = ({ name, link, styled, onClick, drop }) => {
   return (
     <NavLink
       onClick={onClick}
       style={({ isActive }) => {
         return {
-          color: isActive ? "#B28A5D" : "white",
+          color: isActive ? colors.secondary : "white",
           borderRadius: 0,
-          borderBottomColor: isActive ? "#B28A5D" : "transparent",
+          borderBottomColor: isActive ? colors.secondary : "transparent",
           borderBottomWidth: 2,
           paddingBottom: 4,
         };
       }}
       to={link}
+      className="hover:!text-secondary transition-all duration-200"
     >
       <p
-        className={`px-1 cursor-pointer font-bold text-tiny 2xl:text-smaller ${styled}`}
+        className={`px-1 cursor-pointer font-bold ${
+          drop ? "text-small 2xl:text-med" : "text-med 2xl:text-big "
+        } ${styled}`}
       >
         {name}
       </p>
