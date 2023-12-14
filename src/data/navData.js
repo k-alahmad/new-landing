@@ -1,17 +1,8 @@
 export const NavElement = [
   { name: "home", link: "/" },
-  { name: "Properties", link: "/properties" },
-  { name: "AboutUs", link: "/about-us" },
-  { name: "Articles", link: "/articles" },
-  { name: "Jobs", link: "/jobs" },
-  {
-    name: "Services",
-    id: "ServicesDropDown",
-    dropData: [
-      { name: "List With Us", link: "/list-with-us" },
-      { name: "Enquiry", link: "/enquiry" },
-      { name: "Contact Us", link: "/contact" },
-    ],
-  },
+  { name: "Info", link: "/info" },
+  { name: "Nearby", link: "/nearby" },
+  { name: "Video", link: "/video" },
+  { name: "Register", link: "/register" },
   // { name: "Properties", link: "/properties" },
 ];
