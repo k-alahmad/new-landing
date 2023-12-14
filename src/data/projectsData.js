@@ -62,7 +62,7 @@ export const projectsData = [
 		ProjectName: { en: "Acres", ar: "" },
 		HeaderTitle: {
 			en: "The Acres, every step inside brings you closer to the outdoors.",
-			ar: "",
+			ar: "نص عربي للمشروع الثاني أي شي",
 		},
 		HeaderImage: projectTwoHeader,
 		InfoTitle: { en: "", ar: "" },
@@ -73,12 +73,28 @@ export const projectsData = [
 			{ Icon: "", Title: { en: "", ar: "" }, SubTitle: { en: "", ar: "" } },
 		],
 		Nearby: [
-			{ Duration: "", Place: { en: "", ar: "" }, Image: "" },
-			{ Duration: "", Place: { en: "", ar: "" }, Image: "" },
-			{ Duration: "", Place: { en: "", ar: "" }, Image: "" },
-			{ Duration: "", Place: { en: "", ar: "" }, Image: "" },
-			{ Duration: "", Place: { en: "", ar: "" }, Image: "" },
-			{ Duration: "", Place: { en: "", ar: "" }, Image: "" },
+			{
+				Duration: "Next To",
+				Place: { en: "Butterfly Garnden", ar: "" },
+				Image: "",
+			},
+			{ Duration: "15 Min", Place: { en: "Dubai Marina", ar: "" }, Image: "" },
+			{
+				Duration: "10 Min",
+				Place: { en: "Dubai Hills Mall", ar: "" },
+				Image: "",
+			},
+			{ Duration: "29 Min", Place: { en: "DXB Airport", ar: "" }, Image: "" },
+			{
+				Duration: "20 Min",
+				Place: { en: "Dubai Downtown", ar: "" },
+				Image: "",
+			},
+			{
+				Duration: "15    Min",
+				Place: { en: "Mall of Emirates", ar: "" },
+				Image: "",
+			},
 		],
 		Video: "",
 	},
