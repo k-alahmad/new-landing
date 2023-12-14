@@ -69,23 +69,25 @@ const NavBar = () => {
         <div
           className={`transition-all duration-500 w-full px-2 xl:px-12 py-1 max-w-[1920px] flex justify-between items-center relative`}
         >
-          <div className={`flex justify-between items-center`}>
+          <div
+            className={`flex justify-between items-center gap-x-5 animate-pulse`}
+          >
             <div
               onClick={() => setMobileOpen(true)}
               className="cursor-pointer text-white flex justify-center items-center gap-x-2"
             >
               <MdDehaze size={30} />
-              {/* <p className="text-white">{t("menu")}</p> */}
+              <p className="text-white">{t("menu")}</p>
+            </div>
+            <div className="p-1 bg-white text-primary rounded-md shadow-md">
+              <p
+                className="font-bold text-smaller cursor-pointer"
+                onClick={() => handleScroll("register")}
+              >
+                Register Now
+              </p>
             </div>
           </div>
-          {/* <div className="flex justify-center items-center absolute -top-3 left-1/2 -translate-x-1/2">
-            <img
-              src={Logo}
-              className="h-[70px] cursor-pointer"
-              alt=""
-              onClick={() => navigate("/")}
-            />
-          </div> */}
 
           <div className="flex justify-center items-center gap-x-4">
             <Language />

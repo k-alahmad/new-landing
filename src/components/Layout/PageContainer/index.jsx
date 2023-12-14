@@ -18,7 +18,7 @@ const PageLayout = ({ children }) => {
     setW(width);
   }, [width]);
   return (
-    <div className="flex flex-col justify-center items-center relative">
+    <div className="flex flex-col justify-center items-center relative transition-all duration-500">
       <MessageBox />
       <NavBar />
       <div className="min-h-screen w-full max-w-[1920px]">{children}</div>

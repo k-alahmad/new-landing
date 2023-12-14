@@ -2,7 +2,7 @@ import React from "react";
 import { projectsData } from "../../../data/projectsData";
 const Video = ({ selectedProject }) => {
   return (
-    <div className="w-[80vw] h-[650px] mt-12">
+    <div className="w-[80vw] h-[400px] md:h-[650px] mt-12">
       <video
         autoPlay
         loop

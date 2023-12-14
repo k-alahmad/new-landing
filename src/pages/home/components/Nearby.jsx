@@ -6,7 +6,7 @@ const Nearby = ({ selectedProject }) => {
   return (
     <div className="flex justify-center items-center mt-6">
       <div className="w-[80vw]">
-        <p className="text-bigger font-bold text-secondary">
+        <p className="text-big md:text-bigger font-bold text-secondary">
           {t("NearbyPlaces")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6 mt-6">

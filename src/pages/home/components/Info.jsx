@@ -12,7 +12,7 @@ const Info = ({ selectedProject }) => {
         <p className="text-smaller">
           {projectsData[selectedProject].InfoSubTitle[i18n.language]}
         </p>
-        <div className="flex max-md:flex-col md:gap-x-6 mt-4">
+        <div className="flex max-sm:flex-col sm:gap-x-6 mt-4 max-sm:space-y-2">
           {projectsData[selectedProject].InfoData.map((item, index) => {
             return (
               <div className="flex items-center gap-x-1" key={index}>

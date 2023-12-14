@@ -34,7 +34,7 @@ const RegisterForm = () => {
     setValues(defaultFormState);
   }
   return (
-    <div className="w-[80vw] max-w-[700px] mt-12">
+    <div id="register" className="w-[80vw] max-w-[700px] my-12">
       <form className="flex flex-col justify-between items-stretch h-full w-full space-y-4">
         <CustomInput
           icon={<MdPerson className="text-white text-med" />}
