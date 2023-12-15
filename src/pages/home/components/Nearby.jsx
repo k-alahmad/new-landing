@@ -36,9 +36,9 @@ const Nearby = ({ selectedProject }) => {
 					{projectsData[selectedProject].Nearby.map((item, index) => {
 						return (
 							<div key={index} className='relative text-center'>
-								<p className='text-big font-semibold'>
+								<p className='text-[30px] font-semibold '>
 									{item.Duration}
-									<span className='font-normal text-smaller'>
+									<span className='font-normal text-[14px]'>
 										{`   ${t("mins")}`}
 									</span>
 								</p>

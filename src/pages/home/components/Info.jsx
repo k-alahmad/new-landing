@@ -6,10 +6,10 @@ const Info = ({ selectedProject }) => {
 	return (
 		<div className='flex flex-col justify-center items-center mt-12'>
 			<div className='w-[80vw] flex flex-col justify-center items-center'>
-				<p className='font-semibold text-med sm:text-big text-center'>
+				<p className='font-bold text-med sm:text-big text-center'>
 					{projectsData[selectedProject].InfoTitle[i18n.language]}
 				</p>
-				<p className='text-smaller text-center md:w-[50%]'>
+				<p className='text-[14px] text-center md:w-[50%]'>
 					{projectsData[selectedProject].InfoSubTitle[i18n.language]}
 				</p>
 				<div className='flex max-sm:flex-col sm:gap-x-6 mt-4 max-sm:space-y-2'>
