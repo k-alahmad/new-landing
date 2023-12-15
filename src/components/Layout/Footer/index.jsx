@@ -63,7 +63,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-base w-full text-white flex justify-center items-center gap-x-5 ">
-            <p className="text-start text-tiny text-white font-semibold">
+            <p className="text-center md:text-start text-tiny text-white font-semibold">
               @2023 AVA REAL ESTATE, LLC. All rights reserved
             </p>
           </div>

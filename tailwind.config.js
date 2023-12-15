@@ -18,12 +18,12 @@ export default {
         smaller: "20px",
         tiny: "16px",
       },
-      fontFamily: {
-        REG: "LAMASANSREGULAR", //400(normal)
-        MED: "LAMASANSMEDIUM", //500
-        BOLD: "LAMASANSBOLD", //700
-        EXBOLD: "LAMASANSEXTRABOLD", //800
-      },
+      // fontFamily: {
+      //   REG: "LAMASANSREGULAR", //400(normal)
+      //   MED: "LAMASANSMEDIUM", //500
+      //   BOLD: "LAMASANSBOLD", //700
+      //   EXBOLD: "LAMASANSEXTRABOLD", //800
+      // },
       colors: {
         primary: colors.primary,
         secondary: colors.secondary,
