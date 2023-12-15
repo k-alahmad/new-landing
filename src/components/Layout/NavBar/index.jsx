@@ -80,7 +80,7 @@ const NavBar = () => {
           </div>
           <div className="absolute left-1/2 -translate-x-1/2 p-1 px-4 bg-white text-primary rounded-md shadow-md animate-pulse ">
             <p
-              className=" text-[12px] cursor-pointer"
+              className=" text-[12px] md:text-tiny cursor-pointer"
               onClick={() => handleScroll("register")}
             >
               {t("RegisterNow")}

@@ -138,7 +138,7 @@ const RegisterForm = () => {
           </div>
         </div>
         <button
-          className={`bg-secondary text-primary font-semibold text-smaller w-full py-1  disabled:bg-none disabled:bg-gray-500 disabled:text-white rounded-md ${
+          className={`bg-secondary text-primary font-semibold text-smaller md:text-small w-full py-1  disabled:bg-none disabled:bg-gray-500 disabled:text-white rounded-md ${
             isLoading && "animate-pulse"
           } `}
           onClick={handleSubmit}
